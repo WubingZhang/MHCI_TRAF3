@@ -1,0 +1,325 @@
+# Analysis title: MHCI_chipseq_diff_peaks_top1k analysis from Cistrome-GO
+# Mode: Solo mode
+# Specie: hg38
+# Peak bed file name: MHCI_chipseq_diff_peaks_top1k.bed
+# Top peaks to use: 10000
+# Half-decay distance: 1000bp
+# FDR cutoff of GO/KEGG terms to return: 0.2
+# Minimum and maximum gene number in GO and KEGG gene sets: 10, 2000
+# Term	N,n,B,b	Erichment	p_value	FDR	Gene_number
+Pertussis(hsa05133)	7753, 38, 76, 2	5.369	0.11346349076	0.701158813833	76
+Hippo signaling pathway - multiple species(hsa04392)	7753, 0, 29, 0	0.0	1.0	1.0	29
+Retinol metabolism(hsa00830)	7753, 0, 67, 0	0.0	1.0	1.0	67
+MAPK signaling pathway(hsa04010)	7753, 66, 295, 4	1.593	0.480599042968	1.0	295
+Protein export(hsa03060)	7753, 0, 23, 0	0.0	1.0	1.0	23
+Intestinal immune network for IgA production(hsa04672)	7753, 35, 47, 4	18.852	0.000176806216303	0.00310393135288	47
+Leukocyte transendothelial migration(hsa04670)	7753, 0, 112, 0	0.0	1.0	1.0	112
+Phenylalanine metabolism(hsa00360)	7753, 95, 17, 1	4.801	0.189262642503	0.901002215511	17
+AGE-RAGE signaling pathway in diabetic complications(hsa04933)	7753, 15, 100, 1	5.169	0.293982994158	0.947945164836	100
+Parathyroid hormone synthesis, secretion and action(hsa04928)	7753, 47, 106, 2	3.112	0.255807971103	0.947945164836	106
+Cortisol synthesis and secretion(hsa04927)	7753, 47, 65, 1	2.538	0.36905702207	1.0	65
+Relaxin signaling pathway(hsa04926)	7753, 47, 130, 1	1.269	0.6367568899	1.0	130
+Aldosterone synthesis and secretion(hsa04925)	7753, 47, 98, 1	1.683	0.519134112062	1.0	98
+Renin secretion(hsa04924)	7753, 47, 69, 1	2.391	0.388819734582	1.0	69
+Regulation of lipolysis in adipocytes(hsa04923)	7753, 47, 54, 1	3.055	0.312559071862	0.964439586593	54
+Glucagon signaling pathway(hsa04922)	7753, 47, 103, 2	3.203	0.246220545274	0.947945164836	103
+Oxytocin signaling pathway(hsa04921)	7753, 47, 153, 1	1.078	0.705623725809	1.0	153
+Adipocytokine signaling pathway(hsa04920)	7753, 26, 69, 2	8.643	0.052112007849	0.433352486324	69
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis(hsa00563)	7753, 0, 25, 0	0.0	1.0	1.0	25
+Inositol phosphate metabolism(hsa00562)	7753, 0, 74, 0	0.0	1.0	1.0	74
+Glycerolipid metabolism(hsa00561)	7753, 0, 61, 0	0.0	1.0	1.0	61
+Circadian entrainment(hsa04713)	7753, 47, 97, 1	1.701	0.515022277365	1.0	97
+Ether lipid metabolism(hsa00565)	7753, 51, 46, 1	3.305	0.283261798011	0.947945164836	46
+Glycerophospholipid metabolism(hsa00564)	7753, 92, 96, 2	1.756	0.436140231946	1.0	96
+Ribosome biogenesis in eukaryotes(hsa03008)	7753, 0, 79, 0	0.0	1.0	1.0	79
+Thermogenesis(hsa04714)	7753, 47, 218, 2	1.513	0.582610852199	1.0	218
+Endocrine resistance(hsa01522)	7753, 47, 96, 1	1.718	0.510883314779	1.0	96
+Antifolate resistance(hsa01523)	7753, 0, 31, 0	0.0	1.0	1.0	31
+Platinum drug resistance(hsa01524)	7753, 21, 73, 1	5.057	0.274661493992	0.947945164836	73
+Herpes simplex virus 1 infection(hsa05168)	7753, 35, 490, 9	4.069	0.00140015730069	0.018435404459	490
+Epstein-Barr virus infection(hsa05169)	7753, 35, 199, 9	10.018	9.16364954177e-07	3.21745917244e-05	199
+Influenza A(hsa05164)	7753, 79, 169, 10	5.807	3.84632303878e-05	0.000810292053504	169
+Human papillomavirus infection(hsa05165)	7753, 16, 330, 3	4.405	0.0897451055219	0.668247036183	330
+Human T-cell leukemia virus 1 infection(hsa05166)	7753, 47, 218, 8	6.053	0.000230257845233	0.00382955153125	218
+Kaposi sarcoma-associated herpesvirus infection(hsa05167)	7753, 31, 186, 3	4.034	0.105874967184	0.701158813833	186
+Hepatitis C(hsa05160)	7753, 10, 155, 1	5.002	0.342731412215	1.0	155
+Hepatitis B(hsa05161)	7753, 0, 163, 0	0.0	1.0	1.0	163
+Measles(hsa05162)	7753, 66, 131, 3	2.69	0.2156240811	0.946350133715	131
+Human cytomegalovirus infection(hsa05163)	7753, 22, 225, 4	6.265	0.0129128122998	0.127514021461	225
+Proteasome(hsa03050)	7753, 13, 45, 1	13.253	0.122120661113	0.701158813833	45
+Sphingolipid signaling pathway(hsa04071)	7753, 0, 119, 0	0.0	1.0	1.0	119
+GnRH signaling pathway(hsa04912)	7753, 47, 93, 1	1.774	0.498303288038	1.0	93
+Ovarian steroidogenesis(hsa04913)	7753, 47, 49, 1	3.366	0.285874475682	0.947945164836	49
+Rap1 signaling pathway(hsa04015)	7753, 41, 206, 1	0.918	0.781926763439	1.0	206
+Ras signaling pathway(hsa04014)	7753, 51, 231, 2	1.316	0.650180726885	1.0	231
+Hippo signaling pathway(hsa04390)	7753, 0, 154, 0	0.0	1.0	1.0	154
+Prolactin signaling pathway(hsa04917)	7753, 0, 70, 0	0.0	1.0	1.0	70
+Progesterone-mediated oocyte maturation(hsa04914)	7753, 47, 99, 2	3.332	0.235271130312	0.947945164836	99
+Estrogen signaling pathway(hsa04915)	7753, 66, 137, 3	2.572	0.232929856243	0.947945164836	137
+Circadian rhythm(hsa04710)	7753, 0, 31, 0	0.0	1.0	1.0	31
+Thyroid hormone synthesis(hsa04918)	7753, 47, 74, 1	2.229	0.41292111502	1.0	74
+Thyroid hormone signaling pathway(hsa04919)	7753, 47, 116, 2	2.844	0.290153505991	0.947945164836	116
+AMPK signaling pathway(hsa04152)	7753, 20, 120, 1	3.23	0.405128777811	1.0	120
+mTOR signaling pathway(hsa04150)	7753, 70, 153, 1	0.724	0.775381982299	1.0	153
+PI3K-Akt signaling pathway(hsa04151)	7753, 87, 353, 2	0.505	0.95511505589	1.0	353
+Lysine degradation(hsa00310)	7753, 0, 59, 0	0.0	1.0	1.0	59
+Tight junction(hsa04530)	7753, 47, 170, 2	1.941	0.455471296921	1.0	170
+Oxidative phosphorylation(hsa00190)	7753, 0, 120, 0	0.0	1.0	1.0	120
+Basal transcription factors(hsa03022)	7753, 0, 45, 0	0.0	1.0	1.0	45
+Phosphatidylinositol signaling system(hsa04070)	7753, 0, 99, 0	0.0	1.0	1.0	99
+Fatty acid metabolism(hsa01212)	7753, 80, 53, 1	1.829	0.426638728395	1.0	53
+Glycosphingolipid biosynthesis - ganglio series(hsa00604)	7753, 0, 15, 0	0.0	1.0	1.0	15
+Glycosphingolipid biosynthesis - globo and isoglobo series(hsa00603)	7753, 0, 15, 0	0.0	1.0	1.0	15
+Sphingolipid metabolism(hsa00600)	7753, 0, 47, 0	0.0	1.0	1.0	47
+Glycosphingolipid biosynthesis - lacto and neolacto series(hsa00601)	7753, 67, 26, 1	4.451	0.205449239101	0.91439379656	26
+Alanine, aspartate and glutamate metabolism(hsa00250)	7753, 0, 35, 0	0.0	1.0	1.0	35
+Neurotrophin signaling pathway(hsa04722)	7753, 0, 119, 0	0.0	1.0	1.0	119
+Necroptosis(hsa04217)	7753, 68, 162, 5	3.519	0.0389594376763	0.332734656911	162
+Axon guidance(hsa04360)	7753, 25, 181, 1	1.713	0.616334515357	1.0	181
+Retrograde endocannabinoid signaling(hsa04723)	7753, 62, 141, 2	1.774	0.467977864469	1.0	141
+Glycolysis / Gluconeogenesis(hsa00010)	7753, 71, 68, 1	1.606	0.476543937431	1.0	68
+Neuroactive ligand-receptor interaction(hsa04080)	7753, 42, 337, 1	0.548	0.925200564637	1.0	337
+Metabolic pathways(hsa01100)	7753, 84, 1248, 8	0.592	0.998113365076	1.0	1248
+Human immunodeficiency virus 1 infection(hsa05170)	7753, 22, 212, 4	6.649	0.0108677503783	0.11078093934	212
+Th17 cell differentiation(hsa04659)	7753, 35, 106, 5	10.449	0.000375604634102	0.00593455321881	106
+Th1 and Th2 cell differentiation(hsa04658)	7753, 35, 91, 4	9.737	0.00239219415811	0.0290743597678	91
+Signaling pathways regulating pluripotency of stem cells(hsa04550)	7753, 88, 139, 1	0.634	0.799629916019	1.0	139
+Spliceosome(hsa03040)	7753, 66, 133, 3	2.65	0.220601822614	0.947945164836	133
+cGMP-PKG signaling pathway(hsa04022)	7753, 0, 166, 0	0.0	1.0	1.0	166
+Natural killer cell mediated cytotoxicity(hsa04650)	7753, 14, 126, 2	8.79	0.0633695136168	0.500619157573	126
+Calcium signaling pathway(hsa04020)	7753, 47, 187, 1	0.882	0.786638678725	1.0	187
+Ubiquitin mediated proteolysis(hsa04120)	7753, 37, 137, 1	1.529	0.612596874933	1.0	137
+PPAR signaling pathway(hsa03320)	7753, 80, 74, 2	2.619	0.269872402471	0.947945164836	74
+cAMP signaling pathway(hsa04024)	7753, 47, 212, 1	0.778	0.82754351329	1.0	212
+Fluid shear stress and atherosclerosis(hsa05418)	7753, 78, 139, 2	1.43	0.547842728769	1.0	139
+Autophagy - animal(hsa04140)	7753, 59, 127, 2	2.069	0.397932355476	1.0	127
+Lysosome(hsa04142)	7753, 53, 123, 2	2.379	0.353327216265	1.0	123
+Phagosome(hsa04145)	7753, 35, 149, 7	10.407	1.75650552962e-05	0.000426965959507	149
+Endocytosis(hsa04144)	7753, 78, 244, 6	2.444	0.117924091062	0.701158813833	244
+Nitrogen metabolism(hsa00910)	7753, 0, 17, 0	0.0	1.0	1.0	17
+Osteoclast differentiation(hsa04380)	7753, 53, 127, 2	2.304	0.366735059424	1.0	127
+Hypertrophic cardiomyopathy (HCM)(hsa05410)	7753, 0, 85, 0	0.0	1.0	1.0	85
+Arrhythmogenic right ventricular cardiomyopathy (ARVC)(hsa05412)	7753, 0, 72, 0	0.0	1.0	1.0	72
+Dilated cardiomyopathy (DCM)(hsa05414)	7753, 47, 90, 1	1.833	0.485477907254	1.0	90
+Thiamine metabolism(hsa00730)	7753, 0, 16, 0	0.0	1.0	1.0	16
+Viral myocarditis(hsa05416)	7753, 85, 57, 8	12.802	6.1269358847e-07	2.42013967446e-05	57
+Graft-versus-host disease(hsa05332)	7753, 35, 38, 6	34.976	5.31962307411e-08	4.20250222855e-06	38
+Longevity regulating pathway(hsa04211)	7753, 47, 89, 2	3.707	0.199167969701	0.910034852173	89
+Protein processing in endoplasmic reticulum(hsa04141)	7753, 83, 165, 3	1.698	0.4321105408	1.0	165
+Steroid hormone biosynthesis(hsa00140)	7753, 0, 60, 0	0.0	1.0	1.0	60
+Chagas disease (American trypanosomiasis)(hsa05142)	7753, 79, 103, 1	0.953	0.660768489301	1.0	103
+African trypanosomiasis(hsa05143)	7753, 0, 36, 0	0.0	1.0	1.0	36
+Leishmaniasis(hsa05140)	7753, 35, 72, 4	12.306	0.00105923788653	0.0145530074845	72
+Amoebiasis(hsa05146)	7753, 47, 94, 1	1.755	0.502523854134	1.0	94
+Non-homologous end-joining(hsa03450)	7753, 0, 13, 0	0.0	1.0	1.0	13
+Malaria(hsa05144)	7753, 85, 49, 1	1.861	0.41935186238	1.0	49
+Toxoplasmosis(hsa05145)	7753, 85, 112, 7	5.701	0.000936085298445	0.0134455888322	112
+Focal adhesion(hsa04510)	7753, 78, 199, 2	0.999	0.732313493694	1.0	199
+Tryptophan metabolism(hsa00380)	7753, 95, 42, 1	1.943	0.4050043218	1.0	42
+Wnt signaling pathway(hsa04310)	7753, 47, 158, 1	1.044	0.719010983019	1.0	158
+Citrate cycle (TCA cycle)(hsa00020)	7753, 0, 30, 0	0.0	1.0	1.0	30
+Epithelial cell signaling in Helicobacter pylori infection(hsa05120)	7753, 79, 68, 1	1.443	0.507418934508	1.0	68
+Porphyrin and chlorophyll metabolism(hsa00860)	7753, 0, 42, 0	0.0	1.0	1.0	42
+Gap junction(hsa04540)	7753, 47, 88, 1	1.875	0.476791037068	1.0	88
+ABC transporters(hsa02010)	7753, 55, 45, 3	9.398	0.0079258664727	0.0834857935124	45
+Systemic lupus erythematosus(hsa05322)	7753, 85, 131, 19	13.229	8.25300562489e-16	2.60794977747e-13	131
+Rheumatoid arthritis(hsa05323)	7753, 53, 89, 7	11.505	1.02401040857e-05	0.000294170262826	89
+Autoimmune thyroid disease(hsa05320)	7753, 50, 51, 7	21.283	1.16987289496e-07	5.28114049727e-06	51
+Inflammatory bowel disease (IBD)(hsa05321)	7753, 35, 64, 4	13.845	0.000558145890399	0.00839876673172	64
+Toll-like receptor signaling pathway(hsa04620)	7753, 79, 104, 6	5.662	0.00237016055633	0.0290743597678	104
+NOD-like receptor signaling pathway(hsa04621)	7753, 10, 178, 5	21.778	8.7756875257e-06	0.000277311725812	178
+RIG-I-like receptor signaling pathway(hsa04622)	7753, 58, 70, 1	1.91	0.436332909921	1.0	70
+Cytosolic DNA-sensing pathway(hsa04623)	7753, 9, 63, 2	27.347	0.00587368547168	0.0640029175534	63
+DNA replication(hsa03030)	7753, 0, 36, 0	0.0	1.0	1.0	36
+Autophagy - other(hsa04136)	7753, 59, 32, 1	4.106	0.224817094566	0.947945164836	32
+Mitophagy - animal(hsa04137)	7753, 59, 64, 1	2.053	0.409837138554	1.0	64
+SNARE interactions in vesicular transport(hsa04130)	7753, 89, 34, 2	5.124	0.096817924941	0.695328733667	34
+Taurine and hypotaurine metabolism(hsa00430)	7753, 0, 11, 0	0.0	1.0	1.0	11
+Nucleotide excision repair(hsa03420)	7753, 0, 47, 0	0.0	1.0	1.0	47
+Glycosaminoglycan biosynthesis - heparan sulfate / heparin(hsa00534)	7753, 0, 24, 0	0.0	1.0	1.0	24
+Glycosaminoglycan degradation(hsa00531)	7753, 0, 19, 0	0.0	1.0	1.0	19
+Long-term depression(hsa04730)	7753, 0, 60, 0	0.0	1.0	1.0	60
+Glycosaminoglycan biosynthesis - keratan sulfate(hsa00533)	7753, 67, 14, 1	8.265	0.115513392825	0.701158813833	14
+Salivary secretion(hsa04970)	7753, 47, 90, 1	1.833	0.485477907254	1.0	90
+Gastric acid secretion(hsa04971)	7753, 47, 75, 1	2.199	0.417660409145	1.0	75
+Pancreatic secretion(hsa04972)	7753, 90, 97, 2	1.776	0.430322013938	1.0	97
+Carbohydrate digestion and absorption(hsa04973)	7753, 0, 44, 0	0.0	1.0	1.0	44
+Protein digestion and absorption(hsa04974)	7753, 90, 89, 1	0.968	0.648826413032	1.0	89
+Fat digestion and absorption(hsa04975)	7753, 51, 41, 1	3.708	0.254926687089	0.947945164836	41
+Bile secretion(hsa04976)	7753, 47, 72, 1	2.291	0.403361360186	1.0	72
+Vitamin digestion and absorption(hsa04977)	7753, 0, 24, 0	0.0	1.0	1.0	24
+Mineral absorption(hsa04978)	7753, 0, 51, 0	0.0	1.0	1.0	51
+Cholesterol metabolism(hsa04979)	7753, 65, 50, 1	2.386	0.354989026555	1.0	50
+Proximal tubule bicarbonate reclamation(hsa04964)	7753, 0, 23, 0	0.0	1.0	1.0	23
+Pentose phosphate pathway(hsa00030)	7753, 0, 30, 0	0.0	1.0	1.0	30
+Phospholipase D signaling pathway(hsa04072)	7753, 0, 147, 0	0.0	1.0	1.0	147
+Staphylococcus aureus infection(hsa05150)	7753, 38, 66, 5	15.457	5.85091388235e-05	0.00115555549176	66
+Purine metabolism(hsa00230)	7753, 94, 130, 1	0.634	0.79794618489	1.0	130
+Ubiquinone and other terpenoid-quinone biosynthesis(hsa00130)	7753, 44, 11, 1	16.019	0.0628578307736	0.500619157573	11
+Hedgehog signaling pathway(hsa04340)	7753, 47, 47, 1	3.51	0.275032887667	0.947945164836	47
+C-type lectin receptor signaling pathway(hsa04625)	7753, 9, 104, 1	8.283	0.226221657055	0.947945164836	104
+Alzheimer disease(hsa05010)	7753, 0, 165, 0	0.0	1.0	1.0	165
+Parkinson disease(hsa05012)	7753, 47, 129, 1	1.279	0.633477776997	1.0	129
+Drug metabolism - cytochrome P450(hsa00982)	7753, 95, 70, 1	1.166	0.579755423263	1.0	70
+Salmonella infection(hsa05132)	7753, 9, 85, 1	10.135	0.186795532198	0.901002215511	85
+Shigellosis(hsa05131)	7753, 0, 65, 0	0.0	1.0	1.0	65
+Glyoxylate and dicarboxylate metabolism(hsa00630)	7753, 0, 30, 0	0.0	1.0	1.0	30
+Fc gamma R-mediated phagocytosis(hsa04666)	7753, 0, 90, 0	0.0	1.0	1.0	90
+Legionellosis(hsa05134)	7753, 66, 55, 3	6.407	0.0258564967688	0.235606825638	55
+Base excision repair(hsa03410)	7753, 0, 33, 0	0.0	1.0	1.0	33
+Aminoacyl-tRNA biosynthesis(hsa00970)	7753, 0, 44, 0	0.0	1.0	1.0	44
+Allograft rejection(hsa05330)	7753, 35, 36, 6	36.919	3.66598297634e-08	3.86150206841e-06	36
+JAK-STAT signaling pathway(hsa04630)	7753, 87, 162, 1	0.55	0.844173128382	1.0	162
+Synaptic vesicle cycle(hsa04721)	7753, 89, 78, 1	1.117	0.596103925785	1.0	78
+Long-term potentiation(hsa04720)	7753, 47, 67, 1	2.462	0.378991503452	1.0	67
+Valine, leucine and isoleucine degradation(hsa00280)	7753, 0, 48, 0	0.0	1.0	1.0	48
+RNA polymerase(hsa03020)	7753, 0, 31, 0	0.0	1.0	1.0	31
+Cholinergic synapse(hsa04725)	7753, 47, 112, 1	1.473	0.573879818215	1.0	112
+Glutamatergic synapse(hsa04724)	7753, 47, 114, 1	1.447	0.5812765759	1.0	114
+GABAergic synapse(hsa04727)	7753, 59, 89, 2	2.953	0.244952393716	0.947945164836	89
+Serotonergic synapse(hsa04726)	7753, 95, 113, 2	1.444	0.533428876492	1.0	113
+Dopaminergic synapse(hsa04728)	7753, 95, 131, 2	1.246	0.609291523893	1.0	131
+Amino sugar and nucleotide sugar metabolism(hsa00520)	7753, 0, 47, 0	0.0	1.0	1.0	47
+Vasopressin-regulated water reabsorption(hsa04962)	7753, 76, 44, 2	4.637	0.114952849587	0.701158813833	44
+Endocrine and other factor-regulated calcium reabsorption(hsa04961)	7753, 47, 48, 1	3.437	0.280465440337	0.947945164836	48
+Aldosterone-regulated sodium reabsorption(hsa04960)	7753, 70, 37, 1	2.993	0.29014952639	0.947945164836	37
+Collecting duct acid secretion(hsa04966)	7753, 0, 27, 0	0.0	1.0	1.0	27
+One carbon pool by folate(hsa00670)	7753, 0, 20, 0	0.0	1.0	1.0	20
+Type II diabetes mellitus(hsa04930)	7753, 0, 46, 0	0.0	1.0	1.0	46
+Pantothenate and CoA biosynthesis(hsa00770)	7753, 0, 19, 0	0.0	1.0	1.0	19
+Insulin resistance(hsa04931)	7753, 27, 108, 2	5.318	0.123337889642	0.701158813833	108
+Notch signaling pathway(hsa04330)	7753, 0, 48, 0	0.0	1.0	1.0	48
+Pentose and glucuronate interconversions(hsa00040)	7753, 0, 33, 0	0.0	1.0	1.0	33
+Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate(hsa00532)	7753, 0, 20, 0	0.0	1.0	1.0	20
+Biosynthesis of amino acids(hsa01230)	7753, 0, 75, 0	0.0	1.0	1.0	75
+Glutathione metabolism(hsa00480)	7753, 0, 56, 0	0.0	1.0	1.0	56
+Primary bile acid biosynthesis(hsa00120)	7753, 0, 17, 0	0.0	1.0	1.0	17
+TGF-beta signaling pathway(hsa04350)	7753, 0, 89, 0	0.0	1.0	1.0	89
+Tyrosine metabolism(hsa00350)	7753, 95, 36, 1	2.267	0.359083174816	1.0	36
+Cushing syndrome(hsa04934)	7753, 47, 155, 1	1.064	0.711043525854	1.0	155
+Bacterial invasion of epithelial cells(hsa05100)	7753, 78, 74, 2	2.686	0.260941467382	0.947945164836	74
+Metabolism of xenobiotics by cytochrome P450(hsa00980)	7753, 0, 74, 0	0.0	1.0	1.0	74
+Thyroid cancer(hsa05216)	7753, 26, 37, 1	8.059	0.154939912369	0.802639546041	37
+Cell cycle(hsa04110)	7753, 0, 124, 0	0.0	1.0	1.0	124
+Drug metabolism - other enzymes(hsa00983)	7753, 0, 79, 0	0.0	1.0	1.0	79
+Oocyte meiosis(hsa04114)	7753, 47, 125, 2	2.639	0.314358472845	0.964439586593	125
+p53 signaling pathway(hsa04115)	7753, 21, 72, 1	5.128	0.270516273343	0.947945164836	72
+Mucin type O-glycan biosynthesis(hsa00512)	7753, 84, 31, 1	2.977	0.287668618141	0.947945164836	31
+Gastric cancer(hsa05226)	7753, 26, 149, 1	2.001	0.543689871194	1.0	149
+N-Glycan biosynthesis(hsa00510)	7753, 67, 49, 1	2.362	0.356125731839	1.0	49
+Other glycan degradation(hsa00511)	7753, 0, 18, 0	0.0	1.0	1.0	18
+Inflammatory mediator regulation of TRP channels(hsa04750)	7753, 47, 100, 1	1.65	0.52727656781	1.0	100
+RNA transport(hsa03013)	7753, 39, 160, 1	1.242	0.681546835747	1.0	160
+Ribosome(hsa03010)	7753, 0, 134, 0	0.0	1.0	1.0	134
+Chronic myeloid leukemia(hsa05220)	7753, 0, 76, 0	0.0	1.0	1.0	76
+Primary immunodeficiency(hsa05340)	7753, 85, 36, 3	7.601	0.0161476059835	0.154625560326	36
+Propanoate metabolism(hsa00640)	7753, 34, 32, 1	7.126	0.154177349225	0.802639546041	32
+Hematopoietic cell lineage(hsa04640)	7753, 35, 95, 4	9.327	0.00272506484682	0.0309813686755	95
+RNA degradation(hsa03018)	7753, 0, 79, 0	0.0	1.0	1.0	79
+Regulation of actin cytoskeleton(hsa04810)	7753, 0, 214, 0	0.0	1.0	1.0	214
+mRNA surveillance pathway(hsa03015)	7753, 0, 91, 0	0.0	1.0	1.0	91
+Nicotinate and nicotinamide metabolism(hsa00760)	7753, 0, 30, 0	0.0	1.0	1.0	30
+Insulin secretion(hsa04911)	7753, 47, 86, 1	1.918	0.467994741114	1.0	86
+Selenocompound metabolism(hsa00450)	7753, 0, 17, 0	0.0	1.0	1.0	17
+Arginine and proline metabolism(hsa00330)	7753, 95, 49, 1	1.666	0.454477490458	1.0	49
+Maturity onset diabetes of the young(hsa04950)	7753, 0, 26, 0	0.0	1.0	1.0	26
+alpha-Linolenic acid metabolism(hsa00592)	7753, 51, 24, 1	6.334	0.153625835516	0.802639546041	24
+Arachidonic acid metabolism(hsa00590)	7753, 51, 62, 1	2.452	0.369111398486	1.0	62
+Linoleic acid metabolism(hsa00591)	7753, 51, 28, 1	5.429	0.178112866327	0.879432277489	28
+Asthma(hsa05310)	7753, 35, 29, 4	30.554	2.12000613925e-05	0.000478515671431	29
+Morphine addiction(hsa05032)	7753, 47, 91, 1	1.813	0.489780338659	1.0	91
+Nicotine addiction(hsa05033)	7753, 0, 40, 0	0.0	1.0	1.0	40
+Cocaine addiction(hsa05030)	7753, 95, 49, 2	3.331	0.191035279871	0.901002215511	49
+Amphetamine addiction(hsa05031)	7753, 95, 68, 2	2.4	0.299012704241	0.954424389294	68
+Ascorbate and aldarate metabolism(hsa00053)	7753, 0, 27, 0	0.0	1.0	1.0	27
+Galactose metabolism(hsa00052)	7753, 67, 31, 1	3.733	0.240561247299	0.947945164836	31
+Fructose and mannose metabolism(hsa00051)	7753, 0, 32, 0	0.0	1.0	1.0	32
+Mismatch repair(hsa03430)	7753, 0, 23, 0	0.0	1.0	1.0	23
+Vascular smooth muscle contraction(hsa04270)	7753, 63, 132, 3	2.797	0.200736300252	0.910034852173	132
+Peroxisome(hsa04146)	7753, 33, 83, 1	2.831	0.399771463403	1.0	83
+Taste transduction(hsa04742)	7753, 47, 82, 1	2.012	0.450073753212	1.0	82
+Renin-angiotensin system(hsa04614)	7753, 0, 23, 0	0.0	1.0	1.0	23
+Melanoma(hsa05218)	7753, 0, 72, 0	0.0	1.0	1.0	72
+Bladder cancer(hsa05219)	7753, 0, 41, 0	0.0	1.0	1.0	41
+Platelet activation(hsa04611)	7753, 47, 124, 1	1.33	0.616710298761	1.0	124
+Complement and coagulation cascades(hsa04610)	7753, 38, 79, 1	2.583	0.401105130701	1.0	79
+Small cell lung cancer(hsa05222)	7753, 26, 93, 1	3.206	0.384177734199	1.0	93
+Antigen processing and presentation(hsa04612)	7753, 82, 72, 12	15.758	4.40939262654e-11	6.96684034994e-09	72
+Pancreatic cancer(hsa05212)	7753, 0, 75, 0	0.0	1.0	1.0	75
+Endometrial cancer(hsa05213)	7753, 0, 58, 0	0.0	1.0	1.0	58
+Colorectal cancer(hsa05210)	7753, 21, 86, 1	4.293	0.312970973054	0.964439586593	86
+Renal cell carcinoma(hsa05211)	7753, 0, 69, 0	0.0	1.0	1.0	69
+Folate biosynthesis(hsa00790)	7753, 0, 26, 0	0.0	1.0	1.0	26
+Basal cell carcinoma(hsa05217)	7753, 0, 63, 0	0.0	1.0	1.0	63
+Glioma(hsa05214)	7753, 0, 75, 0	0.0	1.0	1.0	75
+Prostate cancer(hsa05215)	7753, 0, 97, 0	0.0	1.0	1.0	97
+Cell adhesion molecules (CAMs)(hsa04514)	7753, 50, 143, 7	7.59	0.000153807852912	0.00285901656002	143
+Phototransduction(hsa04744)	7753, 94, 28, 1	2.946	0.289762658603	0.947945164836	28
+Pathogenic Escherichia coli infection(hsa05130)	7753, 0, 55, 0	0.0	1.0	1.0	55
+Starch and sucrose metabolism(hsa00500)	7753, 0, 36, 0	0.0	1.0	1.0	36
+FoxO signaling pathway(hsa04068)	7753, 70, 131, 2	1.691	0.471160435016	1.0	131
+Olfactory transduction(hsa04740)	7753, 52, 444, 2	0.672	0.932188465578	1.0	444
+HIF-1 signaling pathway(hsa04066)	7753, 0, 100, 0	0.0	1.0	1.0	100
+Type I diabetes mellitus(hsa04940)	7753, 35, 42, 6	31.645	9.49724830197e-08	5.0018841057e-06	42
+NF-kappa B signaling pathway(hsa04064)	7753, 85, 94, 2	1.941	0.390988217469	1.0	94
+Chemokine signaling pathway(hsa04062)	7753, 79, 190, 5	2.583	0.118476970078	0.701158813833	190
+Butanoate metabolism(hsa00650)	7753, 0, 28, 0	0.0	1.0	1.0	28
+Cytokine-cytokine receptor interaction(hsa04060)	7753, 85, 294, 5	1.551	0.451408304492	1.0	294
+Histidine metabolism(hsa00340)	7753, 95, 23, 1	3.548	0.247212945408	0.947945164836	23
+Other types of O-glycan biosynthesis(hsa00514)	7753, 67, 22, 1	5.26	0.176372288849	0.879432277489	22
+EGFR tyrosine kinase inhibitor resistance(hsa01521)	7753, 0, 79, 0	0.0	1.0	1.0	79
+Fatty acid elongation(hsa00062)	7753, 0, 30, 0	0.0	1.0	1.0	30
+Terpenoid backbone biosynthesis(hsa00900)	7753, 0, 22, 0	0.0	1.0	1.0	22
+Fatty acid biosynthesis(hsa00061)	7753, 80, 13, 1	7.455	0.126474849331	0.701158813833	13
+Fanconi anemia pathway(hsa03460)	7753, 46, 54, 1	3.121	0.308918607988	0.964439586593	54
+Cellular senescence(hsa04218)	7753, 14, 158, 2	7.01	0.0909323498604	0.668247036183	158
+Insulin signaling pathway(hsa04910)	7753, 75, 137, 4	3.018	0.111512911568	0.701158813833	137
+Prion diseases(hsa05020)	7753, 79, 35, 2	5.608	0.0848164823592	0.653707522573	35
+Glycine, serine and threonine metabolism(hsa00260)	7753, 95, 40, 2	4.081	0.140303599549	0.764412714785	40
+Apoptosis(hsa04210)	7753, 21, 136, 2	5.429	0.125343498902	0.701158813833	136
+Longevity regulating pathway - multiple species(hsa04213)	7753, 66, 62, 3	5.684	0.0345051460005	0.302878503782	62
+Apoptosis - multiple species(hsa04215)	7753, 21, 33, 1	11.188	0.121822028864	0.701158813833	33
+2-Oxocarboxylic acid metabolism(hsa01210)	7753, 0, 18, 0	0.0	1.0	1.0	18
+Ferroptosis(hsa04216)	7753, 0, 40, 0	0.0	1.0	1.0	40
+Mannose type O-glycan biosynthesis(hsa00515)	7753, 67, 22, 1	5.26	0.176372288849	0.879432277489	22
+VEGF signaling pathway(hsa04370)	7753, 0, 59, 0	0.0	1.0	1.0	59
+Apelin signaling pathway(hsa04371)	7753, 59, 137, 3	2.878	0.201589998899	0.910034852173	137
+Proteoglycans in cancer(hsa05205)	7753, 78, 201, 3	1.484	0.528968634174	1.0	201
+Chemical carcinogenesis(hsa05204)	7753, 0, 82, 0	0.0	1.0	1.0	82
+MicroRNAs in cancer(hsa05206)	7753, 91, 299, 3	0.855	0.840490008023	1.0	299
+Pathways in cancer(hsa05200)	7753, 26, 530, 3	1.688	0.564425523158	1.0	530
+Viral carcinogenesis(hsa05203)	7753, 74, 201, 11	5.734	1.5676946825e-05	0.000412826266391	201
+Transcriptional misregulation in cancer(hsa05202)	7753, 61, 185, 7	4.809	0.00274518456619	0.0309813686755	185
+T cell receptor signaling pathway(hsa04660)	7753, 85, 101, 2	1.806	0.423443079545	1.0	101
+Amyotrophic lateral sclerosis (ALS)(hsa05014)	7753, 9, 51, 1	16.891	0.104103648459	0.701158813833	51
+B cell receptor signaling pathway(hsa04662)	7753, 0, 70, 0	0.0	1.0	1.0	70
+Arginine biosynthesis(hsa00220)	7753, 0, 21, 0	0.0	1.0	1.0	21
+Fc epsilon RI signaling pathway(hsa04664)	7753, 0, 67, 0	0.0	1.0	1.0	67
+Central carbon metabolism in cancer(hsa05230)	7753, 0, 65, 0	0.0	1.0	1.0	65
+Vibrio cholerae infection(hsa05110)	7753, 47, 50, 1	3.299	0.291259761422	0.947945164836	50
+TNF signaling pathway(hsa04668)	7753, 79, 110, 2	1.784	0.431763407914	1.0	110
+Pyrimidine metabolism(hsa00240)	7753, 0, 57, 0	0.0	1.0	1.0	57
+Alcoholism(hsa05034)	7753, 74, 180, 13	7.567	7.08974934225e-08	4.4807215843e-06	180
+Huntington disease(hsa05016)	7753, 20, 187, 1	2.073	0.580408552187	1.0	187
+Non-alcoholic fatty liver disease (NAFLD)(hsa04932)	7753, 0, 145, 0	0.0	1.0	1.0	145
+Biosynthesis of unsaturated fatty acids(hsa01040)	7753, 0, 27, 0	0.0	1.0	1.0	27
+Steroid biosynthesis(hsa00100)	7753, 0, 19, 0	0.0	1.0	1.0	19
+Homologous recombination(hsa03440)	7753, 0, 41, 0	0.0	1.0	1.0	41
+Pyruvate metabolism(hsa00620)	7753, 0, 39, 0	0.0	1.0	1.0	39
+ECM-receptor interaction(hsa04512)	7753, 0, 82, 0	0.0	1.0	1.0	82
+Fatty acid degradation(hsa00071)	7753, 80, 44, 1	2.203	0.369269739141	1.0	44
+Hepatocellular carcinoma(hsa05225)	7753, 0, 168, 0	0.0	1.0	1.0	168
+Tuberculosis(hsa05152)	7753, 35, 177, 4	5.006	0.0260956927131	0.235606825638	177
+Melanogenesis(hsa04916)	7753, 47, 101, 1	1.633	0.531307281188	1.0	101
+Carbon metabolism(hsa01200)	7753, 0, 116, 0	0.0	1.0	1.0	116
+Breast cancer(hsa05224)	7753, 16, 147, 1	3.296	0.439153243286	1.0	147
+Choline metabolism in cancer(hsa05231)	7753, 0, 99, 0	0.0	1.0	1.0	99
+Adherens junction(hsa04520)	7753, 0, 72, 0	0.0	1.0	1.0	72
+Acute myeloid leukemia(hsa05221)	7753, 0, 66, 0	0.0	1.0	1.0	66
+Non-small cell lung cancer(hsa05223)	7753, 26, 66, 1	4.518	0.293414503415	0.947945164836	66
+beta-Alanine metabolism(hsa00410)	7753, 0, 31, 0	0.0	1.0	1.0	31
+Cysteine and methionine metabolism(hsa00270)	7753, 0, 47, 0	0.0	1.0	1.0	47
+Cardiac muscle contraction(hsa04260)	7753, 0, 74, 0	0.0	1.0	1.0	74
+Adrenergic signaling in cardiomyocytes(hsa04261)	7753, 47, 145, 1	1.138	0.683058263467	1.0	145
+IL-17 signaling pathway(hsa04657)	7753, 58, 93, 1	1.437	0.540966275265	1.0	93
+ErbB signaling pathway(hsa04012)	7753, 0, 85, 0	0.0	1.0	1.0	85

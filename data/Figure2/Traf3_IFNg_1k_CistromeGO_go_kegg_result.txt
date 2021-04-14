@@ -1,0 +1,321 @@
+# Analysis title: koTRAF3_IFNG_diff_peaks_top1k analysis from Cistrome-GO
+# Mode: Solo mode
+# Specie: mm10
+# Peak bed file name: koTRAF3_IFNG_diff_peaks_top1k.bed
+# Top peaks to use: 10000
+# Half-decay distance: 10000bp
+# FDR cutoff of GO/KEGG terms to return: 0.2
+# Minimum and maximum gene number in GO and KEGG gene sets: 10, 2000
+# Term	N,n,B,b	Erichment	p_value	FDR	Gene_number
+ABC transporters(mmu02010)	8447, 0, 48, 0	0.0	1.0	1.0	48
+cAMP signaling pathway(mmu04024)	8447, 110, 210, 2	0.731	0.896269603866	1.0	210
+Pathways in cancer(mmu05200)	8447, 35, 535, 6	2.707	0.0971087842342	0.462447435643	535
+C-type lectin receptor signaling pathway(mmu04625)	8447, 80, 112, 3	2.828	0.23089571642	0.699327823136	112
+Transcriptional misregulation in cancer(mmu05202)	8447, 141, 181, 5	1.655	0.420293002999	0.840586005999	181
+Viral carcinogenesis(mmu05203)	8447, 134, 227, 16	4.443	4.91405714935e-06	0.000109513273614	227
+Chemical carcinogenesis(mmu05204)	8447, 132, 94, 1	0.681	0.797403558807	1.0	94
+Proteoglycans in cancer(mmu05205)	8447, 141, 202, 10	2.966	0.0106729931638	0.0975979877571	202
+MicroRNAs in cancer(mmu05206)	8447, 179, 280, 9	1.517	0.384268369234	0.815590008171	280
+TNF signaling pathway(mmu04668)	8447, 167, 110, 10	4.598	0.000314794929139	0.00475615206319	110
+Parathyroid hormone synthesis, secretion and action(mmu04928)	8447, 69, 107, 1	1.144	0.71614034031	1.0	107
+Glucagon signaling pathway(mmu04922)	8447, 0, 101, 0	0.0	1.0	1.0	101
+Regulation of lipolysis in adipocytes(mmu04923)	8447, 116, 56, 1	1.3	0.571748370034	1.0	56
+Adipocytokine signaling pathway(mmu04920)	8447, 80, 71, 4	5.949	0.0146023249077	0.120661177881	71
+Oxytocin signaling pathway(mmu04921)	8447, 75, 153, 2	1.472	0.631175880884	1.0	153
+Relaxin signaling pathway(mmu04926)	8447, 9, 131, 1	7.165	0.311318065404	0.746840446958	131
+Cortisol synthesis and secretion(mmu04927)	8447, 20, 69, 1	6.121	0.285147676467	0.725278996553	69
+Renin secretion(mmu04924)	8447, 0, 76, 0	0.0	1.0	1.0	76
+Aldosterone synthesis and secretion(mmu04925)	8447, 20, 102, 1	4.141	0.399744853636	0.825962876386	102
+Amyotrophic lateral sclerosis (ALS)(mmu05014)	8447, 80, 52, 2	4.061	0.177449682733	0.632599136125	52
+Human immunodeficiency virus 1 infection(mmu05170)	8447, 156, 236, 20	4.589	9.67072036415e-08	3.3525163929e-06	236
+Chemokine signaling pathway(mmu04062)	8447, 161, 194, 12	3.245	0.00181159968107	0.0201863964462	194
+Fatty acid degradation(mmu00071)	8447, 0, 50, 0	0.0	1.0	1.0	50
+Hematopoietic cell lineage(mmu04640)	8447, 150, 93, 5	3.028	0.0787248151663	0.43027531649	93
+Cytokine-cytokine receptor interaction(mmu04060)	8447, 161, 290, 17	3.076	0.000257305898103	0.00422523369517	290
+Starch and sucrose metabolism(mmu00500)	8447, 0, 33, 0	0.0	1.0	1.0	33
+Linoleic acid metabolism(mmu00591)	8447, 0, 50, 0	0.0	1.0	1.0	50
+Apelin signaling pathway(mmu04371)	8447, 29, 138, 1	2.111	0.60401750575	1.0	138
+VEGF signaling pathway(mmu04370)	8447, 75, 58, 1	1.942	0.502755933947	0.950665766008	58
+Biosynthesis of unsaturated fatty acids(mmu01040)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Arachidonic acid metabolism(mmu00590)	8447, 123, 88, 1	0.78	0.760021351697	1.0	88
+Neuroactive ligand-receptor interaction(mmu04080)	8447, 22, 348, 1	1.103	0.86391782256	1.0	348
+Vascular smooth muscle contraction(mmu04270)	8447, 29, 139, 1	2.096	0.606951904689	1.0	139
+Longevity regulating pathway(mmu04211)	8447, 116, 90, 1	0.809	0.757267697266	1.0	90
+Metabolism of xenobiotics by cytochrome P450(mmu00980)	8447, 132, 66, 1	0.97	0.667320442576	1.0	66
+Intestinal immune network for IgA production(mmu04672)	8447, 9, 41, 1	22.892	0.0974985923737	0.462447435643	41
+Drug metabolism - cytochrome P450(mmu00982)	8447, 132, 68, 1	0.941	0.678745998925	1.0	68
+Drug metabolism - other enzymes(mmu00983)	8447, 132, 87, 1	0.736	0.770362279395	1.0	87
+Peroxisome(mmu04146)	8447, 0, 84, 0	0.0	1.0	1.0	84
+Metabolic pathways(mmu01100)	8447, 82, 1287, 14	1.121	0.795554905171	1.0	1287
+Endometrial cancer(mmu05213)	8447, 0, 58, 0	0.0	1.0	1.0	58
+Pancreatic cancer(mmu05212)	8447, 35, 75, 2	6.436	0.10430829539	0.471654900893	75
+Renal cell carcinoma(mmu05211)	8447, 9, 68, 1	13.802	0.164910807721	0.61252585725	68
+Oxidative phosphorylation(mmu00190)	8447, 160, 119, 4	1.775	0.37862505489	0.814696669832	119
+Taste transduction(mmu04742)	8447, 121, 87, 1	0.802	0.752577760611	1.0	87
+Leukocyte transendothelial migration(mmu04670)	8447, 167, 114, 3	1.331	0.589007976076	1.0	114
+Olfactory transduction(mmu04740)	8447, 14, 1129, 2	1.069	0.916342472704	1.0	1129
+Glioma(mmu05214)	8447, 0, 75, 0	0.0	1.0	1.0	75
+DNA replication(mmu03030)	8447, 0, 35, 0	0.0	1.0	1.0	35
+Pancreatic secretion(mmu04972)	8447, 0, 105, 0	0.0	1.0	1.0	105
+Bladder cancer(mmu05219)	8447, 75, 41, 1	2.747	0.371477049326	0.808603482841	41
+Huntington disease(mmu05016)	8447, 78, 181, 1	0.598	0.906523376793	1.0	181
+Porphyrin and chlorophyll metabolism(mmu00860)	8447, 0, 41, 0	0.0	1.0	1.0	41
+Terpenoid backbone biosynthesis(mmu00900)	8447, 108, 21, 1	3.724	0.247635725535	0.699327823136	21
+Cushing syndrome(mmu04934)	8447, 20, 159, 1	2.656	0.558138125165	0.995080543152	159
+Endocrine resistance(mmu01522)	8447, 98, 93, 3	2.78	0.21613405486	0.667800982537	93
+Insulin resistance(mmu04931)	8447, 116, 108, 2	1.348	0.620054310863	1.0	108
+Type II diabetes mellitus(mmu04930)	8447, 116, 48, 2	3.034	0.234509962766	0.699327823136	48
+AGE-RAGE signaling pathway in diabetic complications(mmu04933)	8447, 21, 101, 2	7.965	0.0855034282768	0.43027531649	101
+Non-alcoholic fatty liver disease (NAFLD)(mmu04932)	8447, 80, 145, 6	4.369	0.0109484922163	0.0975979877571	145
+Human papillomavirus infection(mmu05165)	8447, 134, 355, 18	3.196	9.19121726033e-05	0.00159314432512	355
+Influenza A(mmu05164)	8447, 86, 168, 5	2.923	0.103799242942	0.471654900893	168
+Kaposi sarcoma-associated herpesvirus infection(mmu05167)	8447, 131, 213, 16	4.844	1.32661665043e-06	3.76276722667e-05	213
+Human T-cell leukemia virus 1 infection(mmu05166)	8447, 137, 243, 17	4.313	2.83041811996e-06	6.79300348791e-05	243
+Hepatitis B(mmu05161)	8447, 80, 163, 7	4.534	0.00441009476811	0.0458649855884	163
+Hepatitis C(mmu05160)	8447, 30, 160, 4	7.039	0.0112674791038	0.0976514855662	160
+Human cytomegalovirus infection(mmu05163)	8447, 156, 253, 20	4.28	3.47475731721e-07	1.08412428297e-05	253
+Measles(mmu05162)	8447, 61, 135, 4	4.103	0.0645410360341	0.366123695321	135
+MAPK signaling pathway(mmu04010)	8447, 16, 294, 2	3.591	0.325923776411	0.753246061038	294
+Hedgehog signaling pathway(mmu04340)	8447, 0, 44, 0	0.0	1.0	1.0	44
+Epstein-Barr virus infection(mmu05169)	8447, 156, 225, 21	5.054	7.61661786805e-09	3.39483539262e-07	225
+Herpes simplex virus 1 infection(mmu05168)	8447, 113, 427, 20	3.501	7.60428688083e-06	0.000158169167121	427
+Fatty acid biosynthesis(mmu00061)	8447, 0, 14, 0	0.0	1.0	1.0	14
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis(mmu00563)	8447, 0, 25, 0	0.0	1.0	1.0	25
+Adrenergic signaling in cardiomyocytes(mmu04261)	8447, 0, 144, 0	0.0	1.0	1.0	144
+Sphingolipid signaling pathway(mmu04071)	8447, 30, 121, 2	4.654	0.183482024503	0.643217883651	121
+Phospholipase D signaling pathway(mmu04072)	8447, 116, 148, 3	1.476	0.565053700775	1.0	148
+Other types of O-glycan biosynthesis(mmu00514)	8447, 136, 22, 1	2.823	0.304742640232	0.746840446958	22
+Mucin type O-glycan biosynthesis(mmu00512)	8447, 0, 28, 0	0.0	1.0	1.0	28
+Histidine metabolism(mmu00340)	8447, 0, 24, 0	0.0	1.0	1.0	24
+N-Glycan biosynthesis(mmu00510)	8447, 50, 49, 1	3.448	0.364782669362	0.80717867263	49
+Parkinson disease(mmu05012)	8447, 23, 128, 1	2.869	0.520798311596	0.962617626203	128
+Carbon metabolism(mmu01200)	8447, 43, 118, 2	3.33	0.285907094407	0.725278996553	118
+Selenocompound metabolism(mmu00450)	8447, 0, 17, 0	0.0	1.0	1.0	17
+Homologous recombination(mmu03440)	8447, 0, 41, 0	0.0	1.0	1.0	41
+Inflammatory mediator regulation of TRP channels(mmu04750)	8447, 75, 126, 1	0.894	0.794100054811	1.0	126
+Prion diseases(mmu05020)	8447, 4, 34, 1	62.11	0.0407919297528	0.254541641657	34
+Cholinergic synapse(mmu04725)	8447, 121, 113, 1	0.618	0.843227524971	1.0	113
+Gastric cancer(mmu05226)	8447, 141, 150, 5	1.997	0.279099700475	0.725278996553	150
+ECM-receptor interaction(mmu04512)	8447, 163, 83, 2	1.249	0.610365509885	1.0	83
+Breast cancer(mmu05224)	8447, 128, 147, 4	1.796	0.395380049677	0.822390503329	147
+Focal adhesion(mmu04510)	8447, 29, 198, 1	1.471	0.738801993604	1.0	198
+Small cell lung cancer(mmu05222)	8447, 16, 92, 1	5.738	0.321650260875	0.753246061038	92
+Non-small cell lung cancer(mmu05223)	8447, 69, 66, 1	1.855	0.545659791761	0.978424454192	66
+Chronic myeloid leukemia(mmu05220)	8447, 9, 76, 1	12.349	0.188406258848	0.645964316051	76
+Cell adhesion molecules (CAMs)(mmu04514)	8447, 173, 165, 16	4.735	1.84777772324e-06	4.80422208043e-05	165
+Rap1 signaling pathway(mmu04015)	8447, 141, 209, 5	1.433	0.544179703573	0.978424454192	209
+GABAergic synapse(mmu04727)	8447, 121, 90, 2	1.551	0.535180065148	0.978424454192	90
+Spliceosome(mmu03040)	8447, 133, 131, 2	0.97	0.761829497028	1.0	131
+Long-term potentiation(mmu04720)	8447, 0, 66, 0	0.0	1.0	1.0	66
+Glycosphingolipid biosynthesis - ganglio series(mmu00604)	8447, 58, 15, 1	9.709	0.115817540873	0.495000996608	15
+Glycosphingolipid biosynthesis - globo and isoglobo series(mmu00603)	8447, 71, 16, 1	7.436	0.142054654616	0.561025977724	16
+Glycosphingolipid biosynthesis - lacto and neolacto series(mmu00601)	8447, 71, 26, 1	4.576	0.233049558269	0.699327823136	26
+Sphingolipid metabolism(mmu00600)	8447, 0, 48, 0	0.0	1.0	1.0	48
+Galactose metabolism(mmu00052)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Ascorbate and aldarate metabolism(mmu00053)	8447, 0, 27, 0	0.0	1.0	1.0	27
+Fructose and mannose metabolism(mmu00051)	8447, 43, 35, 1	5.613	0.251040757023	0.699327823136	35
+T cell receptor signaling pathway(mmu04660)	8447, 173, 101, 7	3.384	0.0166287360811	0.126540625788	101
+Cardiac muscle contraction(mmu04260)	8447, 0, 74, 0	0.0	1.0	1.0	74
+Type I diabetes mellitus(mmu04940)	8447, 156, 67, 17	13.739	1.88897779716e-14	5.89361072712e-12	67
+Basal transcription factors(mmu03022)	8447, 117, 43, 2	3.358	0.200223354985	0.667800982537	43
+Amino sugar and nucleotide sugar metabolism(mmu00520)	8447, 176, 49, 3	2.938	0.168674260892	0.619133757627	49
+Retrograde endocannabinoid signaling(mmu04723)	8447, 160, 141, 3	1.123	0.699340869986	1.0	141
+Aminoacyl-tRNA biosynthesis(mmu00970)	8447, 115, 44, 2	3.339	0.204141064054	0.667800982537	44
+TGF-beta signaling pathway(mmu04350)	8447, 9, 90, 1	10.428	0.216179164219	0.667800982537	90
+Axon guidance(mmu04360)	8447, 75, 180, 1	0.626	0.900068773466	1.0	180
+IL-17 signaling pathway(mmu04657)	8447, 150, 91, 7	4.332	0.00484361013897	0.0487485923664	91
+Apoptosis - multiple species(mmu04215)	8447, 30, 32, 1	8.799	0.17522386448	0.632599136125	32
+Ferroptosis(mmu04216)	8447, 0, 40, 0	0.0	1.0	1.0	40
+Necroptosis(mmu04217)	8447, 31, 175, 4	6.228	0.0164778125815	0.126540625788	175
+Apoptosis(mmu04210)	8447, 80, 136, 5	3.882	0.0342017121283	0.222311128834	136
+RNA polymerase(mmu03020)	8447, 0, 28, 0	0.0	1.0	1.0	28
+Longevity regulating pathway - multiple species(mmu04213)	8447, 116, 62, 1	1.174	0.61167804472	1.0	62
+FoxO signaling pathway(mmu04068)	8447, 9, 132, 1	7.11	0.313052178883	0.746840446958	132
+Cellular senescence(mmu04218)	8447, 131, 181, 13	4.631	2.98341828497e-05	0.000581766565568	181
+Fatty acid metabolism(mmu01212)	8447, 3, 57, 1	49.398	0.0588739048526	0.340160339148	57
+alpha-Linolenic acid metabolism(mmu00592)	8447, 0, 25, 0	0.0	1.0	1.0	25
+2-Oxocarboxylic acid metabolism(mmu01210)	8447, 0, 19, 0	0.0	1.0	1.0	19
+Glutamatergic synapse(mmu04724)	8447, 121, 114, 1	0.612	0.84599443786	1.0	114
+Central carbon metabolism in cancer(mmu05230)	8447, 141, 64, 1	0.936	0.673112595029	1.0	64
+Serotonergic synapse(mmu04726)	8447, 121, 132, 1	0.529	0.88855561209	1.0	132
+Non-homologous end-joining(mmu03450)	8447, 0, 13, 0	0.0	1.0	1.0	13
+Nicotine addiction(mmu05033)	8447, 0, 40, 0	0.0	1.0	1.0	40
+Synaptic vesicle cycle(mmu04721)	8447, 73, 77, 1	1.503	0.619196366479	1.0	77
+Neurotrophin signaling pathway(mmu04722)	8447, 55, 121, 3	3.808	0.139112181832	0.556448727329	121
+Cocaine addiction(mmu05030)	8447, 0, 48, 0	0.0	1.0	1.0	48
+Allograft rejection(mmu05330)	8447, 156, 60, 16	14.439	5.14366299322e-14	8.02411426942e-12	60
+Graft-versus-host disease(mmu05332)	8447, 162, 62, 16	13.456	1.56361846289e-13	1.62616320141e-11	62
+Dopaminergic synapse(mmu04728)	8447, 121, 131, 1	0.533	0.886518870707	1.0	131
+Propanoate metabolism(mmu00640)	8447, 63, 30, 1	4.469	0.253521434583	0.699988385752	30
+Adherens junction(mmu04520)	8447, 149, 72, 6	4.724	0.00590929003609	0.0558696512503	72
+Glyoxylate and dicarboxylate metabolism(mmu00630)	8447, 0, 30, 0	0.0	1.0	1.0	30
+Proteasome(mmu03050)	8447, 104, 46, 3	5.297	0.0509514839292	0.305708903575	46
+Regulation of actin cytoskeleton(mmu04810)	8447, 135, 216, 6	1.738	0.346408835512	0.78374109272	216
+Tryptophan metabolism(mmu00380)	8447, 76, 46, 1	2.416	0.414274924218	0.83902310341	46
+Mismatch repair(mmu03430)	8447, 0, 22, 0	0.0	1.0	1.0	22
+Thiamine metabolism(mmu00730)	8447, 0, 15, 0	0.0	1.0	1.0	15
+Mannose type O-glycan biosynthesis(mmu00515)	8447, 0, 22, 0	0.0	1.0	1.0	22
+Pentose and glucuronate interconversions(mmu00040)	8447, 0, 33, 0	0.0	1.0	1.0	33
+Insulin signaling pathway(mmu04910)	8447, 116, 138, 1	0.528	0.895826329405	1.0	138
+Glycosaminoglycan biosynthesis - heparan sulfate / heparin(mmu00534)	8447, 122, 24, 1	2.885	0.303469880537	0.746840446958	24
+p53 signaling pathway(mmu04115)	8447, 30, 71, 2	7.931	0.0774064897462	0.43027531649	71
+Oocyte meiosis(mmu04114)	8447, 137, 115, 4	2.145	0.276870350599	0.725278996553	115
+Glycosaminoglycan degradation(mmu00531)	8447, 0, 21, 0	0.0	1.0	1.0	21
+Glycosaminoglycan biosynthesis - keratan sulfate(mmu00533)	8447, 0, 14, 0	0.0	1.0	1.0	14
+Cell cycle(mmu04110)	8447, 19, 123, 2	7.229	0.103742046911	0.471654900893	123
+Complement and coagulation cascades(mmu04610)	8447, 54, 88, 2	3.555	0.241759115477	0.699327823136	88
+Platelet activation(mmu04611)	8447, 75, 123, 2	1.831	0.514018100627	0.962617626203	123
+Antigen processing and presentation(mmu04612)	8447, 131, 88, 16	11.724	2.05036832919e-12	1.59928729677e-10	88
+Bacterial invasion of epithelial cells(mmu05100)	8447, 6, 74, 1	19.025	0.13331980996	0.547312904046	74
+Taurine and hypotaurine metabolism(mmu00430)	8447, 0, 11, 0	0.0	1.0	1.0	11
+Nucleotide excision repair(mmu03420)	8447, 0, 43, 0	0.0	1.0	1.0	43
+Primary bile acid biosynthesis(mmu00120)	8447, 0, 16, 0	0.0	1.0	1.0	16
+PPAR signaling pathway(mmu03320)	8447, 69, 85, 2	2.88	0.300526910592	0.746840446958	85
+Primary immunodeficiency(mmu05340)	8447, 173, 35, 2	2.79	0.246833287155	0.699327823136	35
+Purine metabolism(mmu00230)	8447, 100, 134, 1	0.63	0.873670213968	1.0	134
+Tight junction(mmu04530)	8447, 75, 167, 4	2.698	0.192844257187	0.65399356785	167
+Fanconi anemia pathway(mmu03460)	8447, 158, 51, 1	1.048	0.622365535462	1.0	51
+Long-term depression(mmu04730)	8447, 0, 60, 0	0.0	1.0	1.0	60
+Rheumatoid arthritis(mmu05323)	8447, 146, 83, 8	5.576	0.000395331980835	0.00560652627367	83
+Systemic lupus erythematosus(mmu05322)	8447, 105, 140, 3	1.724	0.474556637931	0.914872437794	140
+Inflammatory bowel disease (IBD)(mmu05321)	8447, 34, 59, 3	12.633	0.00567072445558	0.0552895634419	59
+Autoimmune thyroid disease(mmu05320)	8447, 156, 75, 15	10.829	3.31946824462e-11	2.07134818464e-09	75
+Glycine, serine and threonine metabolism(mmu00260)	8447, 0, 40, 0	0.0	1.0	1.0	40
+Pyruvate metabolism(mmu00620)	8447, 169, 38, 1	1.315	0.537349157062	0.978424454192	38
+Toxoplasmosis(mmu05145)	8447, 34, 108, 2	4.601	0.185955848079	0.644646940006	108
+Retinol metabolism(mmu00830)	8447, 0, 91, 0	0.0	1.0	1.0	91
+Endocrine and other factor-regulated calcium reabsorption(mmu04961)	8447, 0, 55, 0	0.0	1.0	1.0	55
+Other glycan degradation(mmu00511)	8447, 0, 18, 0	0.0	1.0	1.0	18
+Hypertrophic cardiomyopathy (HCM)(mmu05410)	8447, 9, 86, 1	10.913	0.208151113103	0.667800982537	86
+Ubiquitin mediated proteolysis(mmu04120)	8447, 38, 138, 5	8.054	0.00199253193449	0.0214368952952	138
+Alcoholism(mmu05034)	8447, 121, 197, 2	0.709	0.900279407493	1.0	197
+Collecting duct acid secretion(mmu04966)	8447, 73, 27, 1	4.286	0.245692437244	0.699327823136	27
+Ubiquinone and other terpenoid-quinone biosynthesis(mmu00130)	8447, 126, 11, 1	6.095	0.154315613585	0.594400881955	11
+Proximal tubule bicarbonate reclamation(mmu04964)	8447, 0, 22, 0	0.0	1.0	1.0	22
+Signaling pathways regulating pluripotency of stem cells(mmu04550)	8447, 77, 137, 1	0.801	0.826926083414	1.0	137
+Vasopressin-regulated water reabsorption(mmu04962)	8447, 55, 43, 1	3.572	0.346654714088	0.78374109272	43
+Carbohydrate digestion and absorption(mmu04973)	8447, 32, 43, 1	6.139	0.239815646214	0.699327823136	43
+Aldosterone-regulated sodium reabsorption(mmu04960)	8447, 116, 38, 1	1.916	0.429604152705	0.853735641044	38
+Arginine and proline metabolism(mmu00330)	8447, 0, 50, 0	0.0	1.0	1.0	50
+Pentose phosphate pathway(mmu00030)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Arginine biosynthesis(mmu00220)	8447, 0, 19, 0	0.0	1.0	1.0	19
+Legionellosis(mmu05134)	8447, 80, 58, 2	3.641	0.206871728251	0.667800982537	58
+Salmonella infection(mmu05132)	8447, 146, 78, 1	0.742	0.755213514631	1.0	78
+Biosynthesis of amino acids(mmu01230)	8447, 43, 77, 2	5.102	0.145792319701	0.568590046833	77
+Notch signaling pathway(mmu04330)	8447, 134, 49, 3	3.859	0.0978254190784	0.462447435643	49
+Choline metabolism in cancer(mmu05231)	8447, 68, 99, 1	1.255	0.684900411234	1.0	99
+Pertussis(mmu05133)	8447, 139, 76, 3	2.399	0.25853522552	0.703219231821	76
+ErbB signaling pathway(mmu04012)	8447, 75, 84, 1	1.341	0.657591049516	1.0	84
+Hepatocellular carcinoma(mmu05225)	8447, 9, 171, 1	5.489	0.392339386514	0.821682371798	171
+Gap junction(mmu04540)	8447, 17, 86, 1	5.778	0.311714457816	0.746840446958	86
+RNA degradation(mmu03018)	8447, 13, 81, 1	8.022	0.25020158382	0.699327823136	81
+Asthma(mmu05310)	8447, 150, 24, 2	4.693	0.113059476175	0.495000996608	24
+Th1 and Th2 cell differentiation(mmu04658)	8447, 150, 87, 6	3.884	0.0146959126907	0.120661177881	87
+Protein export(mmu03060)	8447, 0, 27, 0	0.0	1.0	1.0	27
+Acute myeloid leukemia(mmu05221)	8447, 0, 69, 0	0.0	1.0	1.0	69
+Th17 cell differentiation(mmu04659)	8447, 31, 102, 3	8.014	0.0213404008726	0.147960112717	102
+Butanoate metabolism(mmu00650)	8447, 0, 26, 0	0.0	1.0	1.0	26
+Salivary secretion(mmu04970)	8447, 0, 78, 0	0.0	1.0	1.0	78
+Morphine addiction(mmu05032)	8447, 121, 92, 1	0.759	0.773125330608	1.0	92
+Autophagy - other(mmu04136)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Fat digestion and absorption(mmu04975)	8447, 20, 40, 1	10.559	0.162332131498	0.610212349727	40
+Insulin secretion(mmu04911)	8447, 116, 86, 1	0.847	0.740100487644	1.0	86
+Vitamin digestion and absorption(mmu04977)	8447, 20, 23, 1	18.363	0.0924054173901	0.457626828979	23
+Bile secretion(mmu04976)	8447, 32, 72, 2	7.332	0.0841467652269	0.43027531649	72
+Cholesterol metabolism(mmu04979)	8447, 20, 49, 1	8.619	0.203731736057	0.667800982537	49
+Phosphatidylinositol signaling system(mmu04070)	8447, 102, 98, 2	1.69	0.52141788086	0.962617626203	98
+beta-Alanine metabolism(mmu00410)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Gastric acid secretion(mmu04971)	8447, 29, 74, 1	3.936	0.382104802336	0.815590008171	74
+Steroid hormone biosynthesis(mmu00140)	8447, 59, 88, 1	1.627	0.602203627062	1.0	88
+Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate(mmu00532)	8447, 0, 20, 0	0.0	1.0	1.0	20
+Folate biosynthesis(mmu00790)	8447, 0, 26, 0	0.0	1.0	1.0	26
+Citrate cycle (TCA cycle)(mmu00020)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Alanine, aspartate and glutamate metabolism(mmu00250)	8447, 0, 36, 0	0.0	1.0	1.0	36
+Dilated cardiomyopathy (DCM)(mmu05414)	8447, 9, 89, 1	10.546	0.215163152555	0.667800982537	89
+JAK-STAT signaling pathway(mmu04630)	8447, 5, 164, 1	10.301	0.259294518098	0.703219231821	164
+Viral myocarditis(mmu05416)	8447, 156, 84, 14	9.025	2.15346380103e-09	1.11980117654e-07	84
+EGFR tyrosine kinase inhibitor resistance(mmu01521)	8447, 141, 79, 2	1.517	0.520838268528	0.962617626203	79
+Fluid shear stress and atherosclerosis(mmu05418)	8447, 167, 143, 7	2.476	0.0841290881254	0.43027531649	143
+Antifolate resistance(mmu01523)	8447, 80, 30, 1	3.52	0.285927296718	0.725278996553	30
+Base excision repair(mmu03410)	8447, 159, 33, 1	1.61	0.468139664989	0.912872346728	33
+Platinum drug resistance(mmu01524)	8447, 30, 77, 1	3.657	0.402506352972	0.826197250838	77
+Amphetamine addiction(mmu05031)	8447, 0, 67, 0	0.0	1.0	1.0	67
+Alzheimer disease(mmu05010)	8447, 80, 166, 5	3.18	0.0825961060002	0.43027531649	166
+Maturity onset diabetes of the young(mmu04950)	8447, 116, 27, 1	2.697	0.324376271958	0.753246061038	27
+Protein digestion and absorption(mmu04974)	8447, 88, 90, 1	1.067	0.713381529747	1.0	90
+Natural killer cell mediated cytotoxicity(mmu04650)	8447, 95, 115, 7	5.412	0.00154032963576	0.0184839556292	115
+Mitophagy - animal(mmu04137)	8447, 130, 63, 3	3.094	0.162228104744	0.610212349727	63
+Ribosome biogenesis in eukaryotes(mmu03008)	8447, 177, 85, 9	5.053	0.000320125619638	0.00475615206319	85
+HIF-1 signaling pathway(mmu04066)	8447, 13, 103, 1	6.308	0.313577238947	0.746840446958	103
+Melanoma(mmu05218)	8447, 141, 72, 2	1.664	0.475029919624	0.914872437794	72
+Glutathione metabolism(mmu00480)	8447, 132, 64, 2	2.0	0.39240600448	0.821682371798	64
+Hippo signaling pathway(mmu04390)	8447, 9, 153, 1	6.134	0.35356805637	0.792515631564	153
+Hippo signaling pathway - multiple species(mmu04392)	8447, 0, 26, 0	0.0	1.0	1.0	26
+Nicotinate and nicotinamide metabolism(mmu00760)	8447, 0, 35, 0	0.0	1.0	1.0	35
+Fatty acid elongation(mmu00062)	8447, 3, 32, 1	87.99	0.0297450555991	0.201749072759	32
+Ras signaling pathway(mmu04014)	8447, 165, 233, 7	1.538	0.416822375091	0.83902310341	233
+Nitrogen metabolism(mmu00910)	8447, 0, 17, 0	0.0	1.0	1.0	17
+Lysine degradation(mmu00310)	8447, 0, 58, 0	0.0	1.0	1.0	58
+NOD-like receptor signaling pathway(mmu04621)	8447, 31, 201, 3	4.067	0.129501374612	0.538725718388	201
+Toll-like receptor signaling pathway(mmu04620)	8447, 149, 99, 8	4.581	0.00160789590127	0.0185801304147	99
+Cytosolic DNA-sensing pathway(mmu04623)	8447, 28, 61, 2	9.891	0.0506665637228	0.305708903575	61
+RIG-I-like receptor signaling pathway(mmu04622)	8447, 86, 68, 4	5.778	0.0152968509217	0.122374807374	68
+Staphylococcus aureus infection(mmu05150)	8447, 61, 90, 1	1.539	0.619623933367	1.0	90
+cGMP-PKG signaling pathway(mmu04022)	8447, 29, 171, 1	1.703	0.685369942498	1.0	171
+Tuberculosis(mmu05152)	8447, 80, 177, 8	4.772	0.00141688999925	0.0177191936005	177
+Calcium signaling pathway(mmu04020)	8447, 29, 188, 1	1.549	0.720823541863	1.0	188
+Autophagy - animal(mmu04140)	8447, 149, 129, 3	1.318	0.603950264269	1.0	129
+Wnt signaling pathway(mmu04310)	8447, 149, 160, 3	1.063	0.740150698492	1.0	160
+Lysosome(mmu04142)	8447, 3, 124, 1	22.707	0.138500974847	0.556448727329	124
+Endocytosis(mmu04144)	8447, 113, 267, 14	3.92	8.67144777122e-05	0.0015914657086	267
+Phagosome(mmu04145)	8447, 113, 176, 16	6.796	1.11612165643e-08	4.35287446009e-07	176
+Glycolysis / Gluconeogenesis(mmu00010)	8447, 43, 66, 2	5.953	0.113199553498	0.495000996608	66
+Pyrimidine metabolism(mmu00240)	8447, 0, 57, 0	0.0	1.0	1.0	57
+Malaria(mmu05144)	8447, 167, 49, 6	6.194	0.00141980717953	0.0177191936005	49
+Renin-angiotensin system(mmu04614)	8447, 82, 36, 1	2.861	0.343203750902	0.78374109272	36
+Glycerophospholipid metabolism(mmu00564)	8447, 96, 97, 2	1.814	0.488420539129	0.929190293952	97
+Ether lipid metabolism(mmu00565)	8447, 0, 47, 0	0.0	1.0	1.0	47
+Inositol phosphate metabolism(mmu00562)	8447, 102, 73, 2	2.269	0.373201607465	0.808603482841	73
+Phototransduction(mmu04744)	8447, 0, 27, 0	0.0	1.0	1.0	27
+Glycerolipid metabolism(mmu00561)	8447, 96, 61, 2	2.885	0.277366712152	0.725278996553	61
+Valine, leucine and isoleucine degradation(mmu00280)	8447, 63, 53, 1	2.53	0.441662743271	0.872144151269	53
+Colorectal cancer(mmu05210)	8447, 9, 88, 1	10.665	0.212867479423	0.667800982537	88
+Fc epsilon RI signaling pathway(mmu04664)	8447, 150, 66, 2	1.706	0.456405868274	0.895588873594	66
+Basal cell carcinoma(mmu05217)	8447, 77, 63, 1	1.741	0.541301701104	0.978424454192	63
+NF-kappa B signaling pathway(mmu04064)	8447, 167, 98, 9	4.645	0.000629941606787	0.0085452948399	98
+Thyroid cancer(mmu05216)	8447, 69, 37, 1	3.309	0.325587149571	0.753246061038	37
+Fc gamma R-mediated phagocytosis(mmu04666)	8447, 61, 85, 1	1.629	0.598477545482	1.0	85
+Prostate cancer(mmu05215)	8447, 31, 97, 1	2.809	0.487164247292	0.929190293952	97
+Arrhythmogenic right ventricular cardiomyopathy (ARVC)(mmu05412)	8447, 0, 72, 0	0.0	1.0	1.0	72
+Thyroid hormone synthesis(mmu04918)	8447, 0, 73, 0	0.0	1.0	1.0	73
+RNA transport(mmu03013)	8447, 49, 166, 1	1.038	0.798934313183	1.0	166
+Ribosome(mmu03010)	8447, 177, 139, 8	2.747	0.0323072134104	0.214464906044	139
+Steroid biosynthesis(mmu00100)	8447, 157, 19, 1	2.832	0.300978977221	0.746840446958	19
+mRNA surveillance pathway(mmu03015)	8447, 145, 91, 2	1.28	0.607172263061	1.0	91
+Pantothenate and CoA biosynthesis(mmu00770)	8447, 0, 18, 0	0.0	1.0	1.0	18
+Prolactin signaling pathway(mmu04917)	8447, 116, 72, 3	3.034	0.178425397368	0.632599136125	72
+Melanogenesis(mmu04916)	8447, 22, 100, 1	3.84	0.412035715523	0.83902310341	100
+Estrogen signaling pathway(mmu04915)	8447, 87, 134, 3	2.174	0.355615988522	0.792515631564	134
+Progesterone-mediated oocyte maturation(mmu04914)	8447, 31, 90, 2	6.055	0.126147149521	0.531863657439	90
+Ovarian steroidogenesis(mmu04913)	8447, 20, 57, 1	7.41	0.242871735722	0.699327823136	57
+GnRH signaling pathway(mmu04912)	8447, 75, 90, 1	1.251	0.680947710328	1.0	90
+One carbon pool by folate(mmu00670)	8447, 0, 19, 0	0.0	1.0	1.0	19
+SNARE interactions in vesicular transport(mmu04130)	8447, 0, 32, 0	0.0	1.0	1.0	32
+Amoebiasis(mmu05146)	8447, 80, 104, 4	4.061	0.058779648073	0.340160339148	104
+Cysteine and methionine metabolism(mmu00270)	8447, 51, 49, 1	3.38	0.369822872019	0.808603482841	49
+B cell receptor signaling pathway(mmu04662)	8447, 95, 70, 3	3.811	0.114631590132	0.495000996608	70
+African trypanosomiasis(mmu05143)	8447, 167, 38, 2	2.662	0.261453304139	0.703219231821	38
+Chagas disease (American trypanosomiasis)(mmu05142)	8447, 9, 103, 2	18.224	0.0184887285658	0.13415077471	103
+Thyroid hormone signaling pathway(mmu04919)	8447, 87, 115, 3	2.533	0.268512700583	0.71603386822	115
+Leishmaniasis(mmu05140)	8447, 149, 66, 5	4.295	0.0176026287492	0.130762384994	66
+Phenylalanine metabolism(mmu00360)	8447, 0, 22, 0	0.0	1.0	1.0	22
+AMPK signaling pathway(mmu04152)	8447, 149, 123, 2	0.922	0.768285407942	1.0	123
+PI3K-Akt signaling pathway(mmu04151)	8447, 141, 353, 7	1.188	0.708168077419	1.0	353
+mTOR signaling pathway(mmu04150)	8447, 116, 154, 3	1.419	0.59143551939	1.0	154
+Protein processing in endoplasmic reticulum(mmu04141)	8447, 57, 162, 5	4.574	0.0192057964553	0.136186556683	162
+Osteoclast differentiation(mmu04380)	8447, 16, 127, 2	8.314	0.0810221033399	0.43027531649	127
+Tyrosine metabolism(mmu00350)	8447, 0, 39, 0	0.0	1.0	1.0	39
+Thermogenesis(mmu04714)	8447, 170, 215, 3	0.693	0.920806295073	1.0	215
+Circadian rhythm(mmu04710)	8447, 0, 30, 0	0.0	1.0	1.0	30
+Circadian entrainment(mmu04713)	8447, 121, 99, 1	0.705	0.799231945532	1.0	99
+Mineral absorption(mmu04978)	8447, 32, 44, 2	11.999	0.0350737083044	0.223326469204	44
