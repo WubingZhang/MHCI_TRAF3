@@ -1,4 +1,4 @@
-# # Therapeutically increasing MHC-I expression potentiates immune checkpoint blockade 
+# Therapeutically increasing MHC-I expression potentiates immune checkpoint blockade 
 
 This repo includes source codes of the data analysis part in our published [paper](https://cancerdiscovery.aacrjournals.org/content/early/2021/02/15/2159-8290.CD-20-0812). For more detail, please read our paper titled ["Therapeutically increasing MHC-I expression potentiates immune checkpoint blockade"](https://cancerdiscovery.aacrjournals.org/content/early/2021/02/15/2159-8290.CD-20-0812).
 
