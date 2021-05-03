@@ -11,9 +11,12 @@ colorbar = c(Grey = "#BABABA", Salmon ="#f77d64", Blue = "#1f78b4")
 options(stringsAsFactors = FALSE)
 
 #### Environment preparation ####
-mergedLFC = readRDS("data/Figure5/MergedLFC_DrugTreatment_raw_2020Apr14.rds")
+#' To repeat this part, please process each drug treatment data downloaded from GEO and 
+#' merge the LFCs from each dataset. The full annotation of drug treatment data is deposit in
+#' data/Figure6/Drug_Perturbation_Annotation.txt.
+mergedLFC = readRDS("path/to/Merged LFC.rds")
 mergedLFC = limma::normalizeQuantiles(mergedLFC)
-DrugAnn = read.table("data/Figure5/Drug_Perturbation_Annotation.txt", header = TRUE, sep = "\t", fill = TRUE, quote = "")
+DrugAnn = read.table("data/Figure6/Drug_Perturbation_Annotation.txt", header = TRUE, sep = "\t", fill = TRUE, quote = "")
 drug_type = DrugAnn$Category[!duplicated(DrugAnn$Treat)]
 names(drug_type) = DrugAnn$Treat[!duplicated(DrugAnn$Treat)]
 CellType = DrugAnn$CancerType[!duplicated(DrugAnn$CellType)]
