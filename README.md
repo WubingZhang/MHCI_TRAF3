@@ -13,6 +13,6 @@ The TCGA datasets and drug treatment datasets are too large so that we can't upl
 Shengqing Stan Gu, Wubing Zhang, Xiaoqing Wang, Peng Jiang, Nicole Traugh, Ziyi Li, Clifford Meyer, Blair Stewig, Yingtian Xie, Xia Bu, Michael P Manos, Alba Font-Tello, Evisa Gjini, Ana Lako, Klothilda Lim, Jake Conway, Alok K Tewari, Zexian Zeng, Avinash Das Sahu, Collin Tokheim, Jason L Weirather, Jingxin Fu, Yi Zhang, Benjamin Kroger, Jin Hua Liang, Paloma Cejas, Gordon J. Freeman, Scott Rodig, Henry W. Long, Benjamin E Gewurz, F. Stephen Hodi, Myles Brown and X. Shirley Liu. Therapeutically increasing MHC-I expression potentiates immune checkpoint blockade. Cancer Discov. 2021 Feb 15; candisc.0812.2020. doi: 10.1158/2159-8290.CD-20-0812. PMID: 33589424.
 
 ## Contacts
-
+* Shirley Liu (xsliu@ds.dfci.harvard.edu)
 * Shengqing Gu (sgu@ds.dfci.harvard.edu)
 * Wubing Zhang (wzhang@ds.dfci.harvard.edu)
