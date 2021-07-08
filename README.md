@@ -6,7 +6,7 @@ This repo includes source codes of the data analysis part in our published [pape
 ## Notes
 All source codes are deposited in the `R` folder and all data required for plotting are deposited in the `data` folder. You can download the source code and related data using `git clone`.  After that, you can repeat our analysis by running the codes in R. For any questions, please create an issue in the GitHub. 
 
-The TCGA datasets and drug treatment datasets are too large so that we can't upload the data to GitHub. To repeat those analyses, you can download all TCGA data from the Broad GDAC Firehose and download all drug treatment datasets from GEO. All GSE IDs of the drug treatment data are provided in the `data/Figure6/Drug_Perturbation_Annotation.txt`.
+The TCGA datasets and drug treatment datasets are too large so that we can't upload the data to GitHub. To repeat those analyses, you can download all TCGA data from the Broad GDAC Firehose and download the processed drug treatment datasets from http://cistrome.org/~wubing/MHCI_TRAF3/.
 
 ## Citation
 

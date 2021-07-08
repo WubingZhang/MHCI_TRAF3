@@ -14,7 +14,7 @@ options(stringsAsFactors = FALSE)
 #' To repeat this part, please process each drug treatment data downloaded from GEO and 
 #' merge the LFCs from each dataset. The full annotation of drug treatment data is deposit in
 #' data/Figure6/Drug_Perturbation_Annotation.txt.
-mergedLFC = readRDS("path/to/Merged LFC.rds")
+mergedLFC = readRDS("http://cistrome.org/~wubing/MHCI_TRAF3/Drug_Perturbation_LFCs.rds")
 mergedLFC = limma::normalizeQuantiles(mergedLFC)
 DrugAnn = read.table("data/Figure6/Drug_Perturbation_Annotation.txt", header = TRUE, sep = "\t", fill = TRUE, quote = "")
 drug_type = DrugAnn$Category[!duplicated(DrugAnn$Treat)]
