@@ -9,6 +9,7 @@ cistromego1$Human = TransGeneID(rownames(cistromego1), "Symbol", "Symbol",
                                 fromOrg = "mmu")
 cistromego1 = na.omit(cistromego1)
 cistromego1 = cistromego1[order(cistromego1$Rank), ]
+dir.create("Figure2", showWarnings = FALSE)
 gg = cistromego1[cistromego1$RP>0,]
 gg$Rank = rank(-gg$RP)
 gg$Label = rownames(gg)
@@ -20,7 +21,7 @@ p = p + geom_label_repel(color = "#377eb8", data = gg[rownames(gg)%in%toplabels,
 p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = c(0.7,0.8), plot.title = element_text(hjust = 0.5))
 p
-ggsave("RankView_Traf3_veh_RP.pdf", p, width = 2.8, height = 3.2)
+ggsave("Figure2/Fig2_RankView_Traf3_veh_RP.pdf", p, width = 2.8, height = 3.2)
 
 
 cistromego2 = read.table("data/Figure2/Traf3_IFNg_1k_CistromeGO_RP_result.txt",
@@ -41,7 +42,7 @@ p = p + geom_label_repel(color = "#377eb8", data = gg[rownames(gg)%in%toplabels,
 p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = c(0.7,0.8), plot.title = element_text(hjust = 0.5))
 p
-ggsave("RankView_Traf3_IFNg_RP.pdf", p, width = 2.8, height = 3.2)
+ggsave("Figure2/Fig2_RankView_Traf3_IFNg_RP.pdf", p, width = 2.8, height = 3.2)
 
 ## Quantification
 library(ggplot2)
@@ -62,11 +63,11 @@ terms = c("mmu04612", "mmu04060", "mmu04145", "mmu04668", "mmu04064",
 p1 = EnrichedView(bp1, mode = 2, subset = terms)
 p1 = p1 + scale_color_manual(values = "#3182bd", guide = FALSE)
 p1 = p1 + labs(title = "Cistrome-GO (IFNg)")
-ggsave("EnrichView_CistromeGO_TRAF3_IFNg.pdf", p1, width = 5.8, height = 2.5)
+ggsave("Figure2/Fig2_EnrichView_CistromeGO_TRAF3_IFNg.pdf", p1, width = 5.8, height = 2.5)
 p2 = EnrichedView(bp2, mode = 2, subset = terms)
 p2 = p2 + scale_color_manual(values = "#6baed6", guide = FALSE)
 p2 = p2 + labs(title = "Cistrome-GO (Vehicle)")
-ggsave("EnrichView_CistromeGO_TRAF3_Veh.pdf", p2, width = 5.8, height = 2.5)
+ggsave("Figure2/Fig2_EnrichView_CistromeGO_TRAF3_Veh.pdf", p2, width = 5.8, height = 2.5)
 
 #### Cistrome-toolkit ####
 Toolkit = read.csv("data/Figure2/koTRAF3_IFNg_diff_peaks_top1k_Toolkit_result.csv",
@@ -81,7 +82,7 @@ p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("CistromeToolkit_koTRAF3_IFNg.pdf", p, width = 3.5, height = 2.3)
+ggsave("Figure2/Fig2_CistromeToolkit_koTRAF3_IFNg.pdf", p, width = 3.5, height = 2.3)
 
 Toolkit = read.csv("data/Figure2/koTRAF3_Veh_diff_peaks_top1k_Toolkit_result.csv",
                    header = TRUE, stringsAsFactors = FALSE)
@@ -95,4 +96,4 @@ p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("CistromeToolkit_koTRAF3_Veh.pdf", p, width = 3.5, height = 2.3)
+ggsave("Figure2/Fig2_CistromeToolkit_koTRAF3_Veh.pdf", p, width = 3.5, height = 2.3)

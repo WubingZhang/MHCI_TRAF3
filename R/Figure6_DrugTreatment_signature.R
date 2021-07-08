@@ -2,19 +2,20 @@
 rm(list=ls())
 library(ComplexHeatmap); library(robustbase);
 library(circlize);
-library(quickAnalyze)
 library(MAGeCKFlute)
 library(ggplot2)
 library(RColorBrewer)
 date = format(Sys.time(), "%b.%d.%Y")
 colorbar = c(Grey = "#BABABA", Salmon ="#f77d64", Blue = "#1f78b4")
 options(stringsAsFactors = FALSE)
+dir.create("Figure6", showWarnings = FALSE)
 
 #### Environment preparation ####
-#' To repeat this part, please process each drug treatment data downloaded from GEO and 
+#' To repeat this part, please process each drug treatment data downloaded from GEO and
 #' merge the LFCs from each dataset. The full annotation of drug treatment data is deposit in
 #' data/Figure6/Drug_Perturbation_Annotation.txt.
-mergedLFC = readRDS("http://cistrome.org/~wubing/MHCI_TRAF3/Drug_Perturbation_LFCs.rds")
+# mergedLFC = readRDS("http://cistrome.org/~wubing/MHCI_TRAF3/Drug_Perturbation_LFCs.rds")
+mergedLFC = readRDS("data/Figure4//Drug_Perturbation_LFCs.rds")
 mergedLFC = limma::normalizeQuantiles(mergedLFC)
 DrugAnn = read.table("data/Figure6/Drug_Perturbation_Annotation.txt", header = TRUE, sep = "\t", fill = TRUE, quote = "")
 drug_type = DrugAnn$Category[!duplicated(DrugAnn$Treat)]
@@ -75,7 +76,7 @@ p1 = Heatmap(t(gg), name = "logFC", color_space = "RGB",
 )
 draw(p1, padding = unit(c(2, 2, 2, 2), "mm"), heatmap_legend_side = "right")
 
-pdf(paste0("Heatmap_DrugTreatment_MHCI_PDL1.pdf"),
+pdf(paste0("Figure6/Fig6_Heatmap_DrugTreatment_MHCI_PDL1.pdf"),
     width = 7.5, height = 3)
 draw(p1, padding = unit(c(2, 2, 2, 2), "mm"), heatmap_legend_side = "right")
 decorate_annotation("foo", {
@@ -97,14 +98,14 @@ p2 = Heatmap(cor(gg), name = "Pearson correlation", color_space = "RGB",
                legend_height = unit(40, "mm"))
 )
 draw(p2, padding = unit(c(2, 1, 1, 1), "mm"))
-pdf("Heatmap_MHCI_PDL1_pearson.pdf", width = 3.5, height = 2)
+pdf("Figure6/Fig6_Heatmap_MHCI_PDL1_pearson.pdf", width = 3.5, height = 2)
 draw(p2, padding = unit(c(2, 1, 1, 1), "mm"))
 dev.off()
 
 
 ## Plot the TRAF3 signature scores of drugs
 # TRAF3 signature
-degres = readRDS("data/Figure5/DESeqRes_koTRAF3_IFNg.rds")
+degres = readRDS("data/Figure2/DESeqRes_koTRAF3_IFNg.rds")
 degres = degres[order(-abs(degres$stat)), ]
 degres = degres[!duplicated(degres$Human), ]
 degres = degres[order(degres$stat), ]
@@ -131,7 +132,7 @@ p = p + annotate(geom="text", label = paste0("r = ", round(test$estimate,3),
                  parse = FALSE, x = max(gg$TRAF3_sig),
                  y = min(gg$MHCI), hjust=1, vjust=-1)
 p
-ggsave("Correlation_MHCI_Signature.pdf", p, width = 4, height = 3.2)
+ggsave("Figure6/Fig6_Correlation_MHCI_Signature.pdf", p, width = 4, height = 3.2)
 
 gg = data.frame(Sample = colnames(mergedLFC), TRAF3_sig = TRAF3_sig,
                 MHCI = colMeans(mergedLFC[c("3105","3106","3107","567", "6890",
@@ -156,26 +157,4 @@ p = p + theme(legend.position = c(0.8,0.08),
               legend.box.background = element_rect(colour = "black"))
 p = p + labs(x = "TRAF3 knockout signature", y = "MHC-I expression change", color=NULL)
 p
-ggsave("Scatter_DrugTreatment_SMAC.pdf", p, width = 4, height = 3.2)
-
-gg$Treat = gg$Label
-gg$Label[gg$Label%in%c("BV6", "SM164")] = "SMAC mimetic"
-gg$Label[gg$TRAF3_sig<0.5|gg$MHCI<0.5] = ""
-gg$Size = "none"
-gg$Size[gg$PDL1<0.5&gg$MHCI>0.5&gg$TRAF3_sig>0.5] = "selected"
-gg$Label[gg$Size=="none"] = ""
-library(ggpubr)
-library(ggrepel)
-
-p = ggplot(gg, aes(TRAF3_sig, MHCI, label = Label,
-                   color = Color, size = Size))
-p = p + geom_point(alpha = 0.6)
-p = p + scale_color_manual(values = c("#8da0cb", "#e41a1c"))
-p = p + scale_size_manual(values = c(1, 3))
-p = p + theme_pubr()
-p = p + theme(legend.position = "none")
-p = p + geom_text_repel(size = 3.5, force = 5, color = "black")
-p = p + labs(x = "TRAF3 knockout signature", y = "MHC-I expression change")
-p
-ggsave("Scatter_signature_SMAC.pdf", p, width = 6, height = 5.5)
-
+ggsave("Figure6/Fig6_Scatter_DrugTreatment_SMAC.pdf", p, width = 4, height = 3.2)

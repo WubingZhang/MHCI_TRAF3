@@ -1,13 +1,14 @@
 library(MAGeCKFlute)
-library(rMAUPS)
 require(ggplot2)
 require(ggpubr)
 library("ggfortify")
 library(ggcorrplot)
 options(stringsAsFactors = FALSE)
+source("R/DEAnalyze.R")
 rm(list = ls())
+dir.create("Figure6", showWarnings = FALSE)
 
-normdata = read.csv("data/Figure6/SMAC_ICB_RNASeq_normalized.csv")
+normdata = readRDS("data/Figure6/SMAC_ICB_RNASeq_normalized.rds")
 scaledata = t(scale(t(normdata)))
 genes = c("TAP1", "B2M", "CD8A", "CD8B", "PRF1", "GZMA", "GZMB")
 genes = c("Tap1", "Tap2", "Tapbp", "B2m", "H2-K1", "H2-D1",
@@ -28,7 +29,7 @@ p = EnrichedView(gg, x = "NES", rank_by = "NES", top = 15, charLength = 100)
 p = p + labs(title = "SMAC VS Vehicle")
 p = p + scale_color_manual(values = "#66c2a5")
 p
-ggsave("EnrichedView_SMAC_vs_Vehicle.pdf", p, width = 5.5, height = 2.8)
+ggsave("Figure6/Fig6_EnrichedView_SMAC_vs_Vehicle.pdf", p, width = 5.5, height = 2.8)
 
 gg = enrichRes2@result[rownames(enrichRes2@result)%in%terms, ]
 gg["GOBP:0002479",2] = "antigen processing and presentation via MHC-I"
@@ -36,12 +37,12 @@ p = EnrichedView(gg, x = "NES", rank_by = "NES", top = 15, charLength = 100)
 p = p + labs(title = "SMAC+ICB VS ICB")
 p = p + scale_color_manual(values = "#fc8d62")
 p
-ggsave("EnrichedView_SMAC+ICB_vs_ICB.pdf", p, width = 6, height = 3)
+ggsave("Figure6/Fig6_EnrichedView_SMAC+ICB_vs_ICB.pdf", p, width = 6, height = 3)
 
 # Immune cell infiltration
-timer = read.csv("data/Figure6/TIMER_estimation.csv", header = TRUE)
+timer = read.csv("data/Figure6/TIMER_estimation.csv")
 gg = reshape2::melt(timer, id.vars = "sampleID")
-gg$Condition = metadata[gg$sampleID,1]
+gg$Condition = gsub("_.*", "", gg$sampleID)
 for(ct in unique(gg$variable)){
   p = ggplot(gg[gg$variable==ct, ], aes(Condition, y=value, color = Condition), alpha=0.5)
   p = p + geom_boxplot()
@@ -51,11 +52,16 @@ for(ct in unique(gg$variable)){
   p = p + theme_pubr()
   p = p + theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
   p
-  ggsave(paste0("Boxview_TIMER_", ct, ".pdf"), p, width = 4, height = 3.5)
+  ggsave(paste0("Figure6/Fig6_Boxview_TIMER_", ct, ".pdf"), p, width = 4, height = 3.5)
 }
 
 # TRAF3 signature analysis
-degres = readRDS("data/Figure6/DESeqRes_koTRAF3_IFNg.rds")
+HumanGene = TransGeneID(rownames(normdata), "Symbol", "Symbol", fromOrg = "mmu")
+idx = duplicated(HumanGene)|is.na(HumanGene)
+normdata = normdata[!idx, ]
+rownames(normdata) = HumanGene[!idx]
+
+degres = readRDS("data/Figure4/DESeqRes_koTRAF3_IFNg.rds")
 degres = degres[order(-abs(degres$stat)), ]
 degres = degres[!duplicated(degres$Human), ]
 degres = degres[order(degres$stat), ]
@@ -65,7 +71,7 @@ gset = list(UG = degres$Human[(nrow(degres)-199):nrow(degres)], DG = degres$Huma
 genes = intersect(unlist(gset), rownames(normdata))
 TRAF3_sig = as.vector(t(normdata[genes, ])%*%weights[genes] / (length(genes)^0.5))
 gg = data.frame(Sample = colnames(normdata),
-                Condition = metadata[colnames(normdata),1],
+                Condition = gsub("_.*", "", colnames(normdata)),
                 TRAF3_sig = TRAF3_sig)
 p = ggplot(gg[gg$Condition%in%c("SMAC", "Vehicle"), ],
            aes(Condition, TRAF3_sig, color = Condition))
@@ -76,9 +82,9 @@ p = p + theme_pubr()
 p = p + labs(x = NULL, y = "TRAF3 knockout signature", color = NULL)
 p = p + theme(legend.position = "none")
 p
-ggsave("Boxview_TRAF3_signature_SMAC.pdf", p, width = 2.5, height = 3)
+ggsave("Figure6/Fig6_Boxview_TRAF3_signature_SMAC.pdf", p, width = 2.5, height = 3)
 
-p = ggplot(gg[gg$Condition%in%c("ICB", "SMAC+ICB"), ],
+p = ggplot(gg[gg$Condition%in%c("ICB", "SMAC.ICB"), ],
            aes(Condition, TRAF3_sig, color = Condition))
 p = p + geom_boxplot()
 p = p + geom_jitter()
@@ -87,4 +93,4 @@ p = p + theme_pubr()
 p = p + labs(x = NULL, y = "TRAF3 knockout signature", color = NULL)
 p = p + theme(legend.position = "none")
 p
-ggsave("Boxview_TRAF3_signature_SMAC+ICB.pdf", p, width = 2.5, height = 3)
+ggsave("Figure6/Fig6_Boxview_TRAF3_signature_SMAC+ICB.pdf", p, width = 2.5, height = 3)

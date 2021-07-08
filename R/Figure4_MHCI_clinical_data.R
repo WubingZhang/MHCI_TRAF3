@@ -1,6 +1,4 @@
 library(MAGeCKFlute)
-library(quickAnalyze)
-library(rMAUPS)
 library(ComplexHeatmap)
 library(circlize)
 library(ggplot2)
@@ -8,7 +6,15 @@ library(ggpubr)
 
 rm(list = ls())
 options(stringsAsFactors = FALSE)
-normdata = read.csv("data/Figure4/MHCI_RNASeq_vst_normalized.csv")
+dir.create("Figure4", showWarnings = FALSE)
+normdata = readRDS("data/Figure4/MHCI_RNASeq_vst_normalized.rds")
+normdata = as.matrix(normdata)
+scaleexpr = t(scale(t(normdata)))
+metadata = read.csv("data/Figure4/MHCI_RNASeq_metasheet.csv", row.names = 1, header = TRUE, stringsAsFactors = FALSE)
+metadata = metadata[order(metadata$MHC.I), ]
+metadata$MHC.I = factor(tolower(metadata$MHC.I), levels = c("low", "high"))
+colnames(metadata)[2] = "MHCI"
+
 genes = c("HLA-A", "HLA-B", "HLA-C", "B2M", "TAP1", "TAP2",
           "TAPBP", "NLRC5", "PSMB8", "PSMB9")
 gg = data.frame(Gene = factor(rep(genes,2), levels = genes),
@@ -34,7 +40,7 @@ p = p + labs(x = NULL, y = "Normalized expression", color = NULL)
 p = p + theme(plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("Barview_MHCI_expression.pdf", p, width = 3.8, height = 5)
+ggsave("Figure4/Fig4_Barview_MHCI_expression.pdf", p, width = 3.8, height = 5)
 
 
 gg = as.data.frame(t(scaleexpr[genes, ]))
@@ -61,10 +67,10 @@ p = p + labs(x = NULL, y = "Normalized expression", color = NULL, fill = NULL)
 p = p + theme(plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("Dotview_MHCI_expression.pdf", p, width = 3, height = 4.5)
+ggsave("Figure4/Fig4_Dotview_MHCI_expression.pdf", p, width = 3, height = 4.5)
 
 #### Read the signatures ####
-degres = readRDS("data/Figure2/DESeqRes_koTRAF3_IFNg.rds")
+degres = readRDS("data/Figure4/DESeqRes_koTRAF3_IFNg.rds")
 degres = degres[order(-abs(degres$stat)), ]
 degres = degres[!duplicated(degres$Human), ]
 degres = degres[order(degres$stat), ]
@@ -84,7 +90,7 @@ p = p + scale_color_manual(values = c("#1f7fb4", "#fb8072"), guide = FALSE)
 p = p + theme_pubr()
 p = p + labs(x = NULL, y = "Traf3-knockout signature")
 p
-ggsave("Boxplot_TRAF3_sig.pdf", p, width = 2.6, height = 3)
+ggsave("Figure4/Fig4_Boxplot_TRAF3_sig.pdf", p, width = 2.6, height = 3)
 
 enrich2 = readRDS("data/Figure4/EnrichGSERes_Stevehodi_RNAseq.rds")
 enrich2@result$pvalue = format(enrich2@result$p.adjust, scientific = TRUE, digits = 3)
@@ -95,7 +101,6 @@ enrich2@result$Description[enrich2@result$ID=="GOBP:0033209"] = "TNF signaling"
 enrich2@result$Description[enrich2@result$ID=="GOBP:0060333"] = "IFNg signaling"
 
 cbp1 <- c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3")
-names(cbp1) =
 p = ggView::gseaView(enrich2, c("GOBP:0043123", "GOBP:0050852", "GOBP:0019886",
                                 "GOBP:0033209"),
              base_size = 12)
@@ -111,7 +116,7 @@ p = p + theme(axis.line = element_line(size=0.5, colour = "black"),
 p = p + theme(legend.key.height = unit(4.5, "mm"))
 p = p + labs(x = "Rank in ordered gene list")
 p
-ggsave("GSEAplot_MHCI_high.pdf", p, width = 5, height = 5)
+ggsave("Figure4/Fig4_GSEAplot_MHCI_high.pdf", p, width = 5, height = 5)
 
 idx = enrich2@result$ID %in% c("GOBP:0043123", "GOBP:0050852", "GOBP:0033209", "GOBP:0019886")
 tmpgenes = strsplit(enrich2@result$geneName[idx], "\\/")
@@ -147,7 +152,7 @@ p = Heatmap(scaleexpr[tmpgenes$Gene,],
               legend_width = unit(2, "in"),
               title_position = "lefttop",
               legend_direction = "horizontal"))
-pdf(paste0("Heatmap_Pathways_expression.pdf"), width = 3.5, height = 5)
+pdf(paste0("Figure4/Fig4_Heatmap_Pathways_expression.pdf"), width = 3.5, height = 5)
 draw(p, padding = unit(c(2, 2, 2, 2), "mm"), heatmap_legend_side = "bottom")
 dev.off()
 
@@ -164,6 +169,7 @@ library(ggrepel)
 source('R/RankView2.R')
 cistromego1 = read.table("data/Figure4/MHCI_chipseq_diffpeak_top1k_CistromeGO_RP_result.txt",
                          sep = "\t", row.names = 1, quote = "")
+metadata = read.csv("data/Figure4/MHCI_chipseq_metasheet.csv", header = TRUE, row.names = 1)
 colnames(cistromego1) = c("Coordinate", "PeakNum", "RP", "adjRP", "Rank")
 cistromego1 = na.omit(cistromego1)
 cistromego1 = cistromego1[order(cistromego1$Rank), ]
@@ -179,7 +185,7 @@ p = p + geom_label_repel(color = "#377eb8",
 p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 p
-ggsave("RankView_MHCI_chipseq_RP.pdf", p, width = 2.5, height = 3.2)
+ggsave("Figure4/Fig4_RankView_MHCI_chipseq_RP.pdf", p, width = 2.5, height = 3.2)
 
 ## Quantification
 library(ggplot2)
@@ -195,7 +201,7 @@ p1 = p1 + scale_color_manual(values = "#3182bd", guide = FALSE)
 p1 = p1 + labs(title = "Cistrome-GO (H3K27ac)")
 p1 = p1 + xlim(1, NA)
 p1
-ggsave("EnrichView_CistromeGO_KEGG_H3K27ac.pdf", p1, width = 5, height = 2.5)
+ggsave("Figure4/Fig4_EnrichView_CistromeGO_KEGG_H3K27ac.pdf", p1, width = 5, height = 2.5)
 
 terms = c("GO:0019882", "GO:0001916", "GO:0050707", "GO:0032652", "GO:0051092")
 bp2 = read.table("data/Figure4/MHCI_chipseq_diffpeak_top1k_CistromeGO_go_bp_result.txt",
@@ -210,7 +216,7 @@ p2 = EnrichedView(bp2, mode = 2, subset = terms)
 p2 = p2 + scale_color_manual(values = "#3182bd", guide = FALSE)
 p2 = p2 + labs(title = "Cistrome-GO (H3K27ac)")
 p2
-ggsave("EnrichView_CistromeGO_BP_H3K27ac.pdf", p2, width = 5.5, height = 2.5)
+ggsave("Figure4/Fig4_EnrichView_CistromeGO_BP_H3K27ac.pdf", p2, width = 5.5, height = 2.5)
 
 #### Cistrome-toolkit ####
 Toolkit = read.csv("data/Figure4/MHCI_chipseq_diff_peaks_top1k_toolkit_result.csv",
@@ -226,7 +232,7 @@ p = p + theme_bw(base_line_size = NA)
 p = p + theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("CistromeToolkit_MHCI_chipseq.pdf", p, width = 3.5, height = 2.3)
+ggsave("Figure4/Fig4_CistromeToolkit_MHCI_chipseq.pdf", p, width = 3.5, height = 2.3)
 
 RPmat = read.csv("data/Figure4/merged_RPScore.csv", header = TRUE, row.names = 1, check.names = FALSE)
 RPmat = as.matrix(RPmat)
@@ -257,7 +263,7 @@ p = p + labs(x = NULL, y = "Normalized RP", color = NULL)
 p = p + theme(plot.title = element_text(hjust = 0.5))
 p = p + coord_flip()
 p
-ggsave("Barview_H3K27ac_MHCI_RP.pdf", p, width = 3.5, height = 5)
+ggsave("Figure4/Fig4_Barview_H3K27ac_MHCI_RP.pdf", p, width = 3.5, height = 5)
 
 
 #### TRAF3 signature score ####
@@ -286,5 +292,5 @@ p = p + theme_pubr()
 p = p + labs(x = NULL, y = "Traf3-knockout signature", title = "Regulatory potential")
 p = p + theme(plot.title = element_text(hjust = 0.5))
 p
-ggsave("Boxplot_RP_TRAF3_sig.pdf", p, width = 2.6, height = 3)
+ggsave("Figure4/Fig4_Boxplot_RP_TRAF3_sig.pdf", p, width = 2.6, height = 3)
 

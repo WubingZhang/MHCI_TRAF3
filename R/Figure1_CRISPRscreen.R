@@ -37,6 +37,7 @@ Mouse2Human = Mouse2Human[!(is.na(Mouse2Human)|Mouse2Human=="")]
 ############### Visualize CRISPR screen results ##################
 tophits = list()
 merged = c()
+dir.create("Figure1", showWarnings = FALSE)
 for(gr in groups){
   tmp1 = ReadRRA(geneSum[[paste0(gr, "_1")]]);
   tmp2 = ReadRRA(geneSum[[paste0(gr, "_2")]]);
@@ -62,7 +63,7 @@ for(gr in groups){
   p1 = RankView2(gg, text = "id", cutoff = 10, color_pal = color_pal,
                  top = 0, genelist = topgenes[[gr]],
                  legend.pos = c(0.7, 0.58), title = labels[gr])
-  ggsave(paste0("Fig1_RankView_", gr, "_", date, ".pdf"), p1,
+  ggsave(paste0("Figure1/Fig1_RankView_", gr, "_", date, ".pdf"), p1,
          width = 2.2, height = 2.8, dpi = 200, useDingbats=FALSE)
   genescore = gg$LFC; names(genescore) = gg$id
 
@@ -72,6 +73,6 @@ for(gr in groups){
   p2 = rScatterView(genescore, top = 0, genelist = topgenes[[gr]], cutoff = 10,
                     color_pal = color_pal, title = labels[gr])
   p2 = p2 + labs(x = "RandomIndex", y = "Log2FC")
-  ggsave(paste0("Fig1_rScatterView_", gr, "_", date, ".pdf"), p2,
+  ggsave(paste0("Figure1/Fig1_rScatterView_", gr, "_", date, ".pdf"), p2,
          width = 2.8, height = 2.8, dpi = 200, useDingbats=FALSE)
 }

@@ -1,10 +1,12 @@
 rm(list = ls())
 library(MAGeCKFlute)
-library(rMAUPS)
 library(ggpubr)
 library(ComplexHeatmap)
 source('R/VolcanoView.R')
+source('R/DEAnalyze.R')
+source('R/TransformCount.R')
 date = format(Sys.time(), "%b.%d.%Y")
+dir.create("Figure2", showWarnings = FALSE)
 
 #### Prepare the koTRAF3 RNA-Seq data ####
 rawcount = readRDS("data/Figure2/koTRAF3_rawcount.rds")
@@ -14,12 +16,12 @@ colnames(rawcount) = paste0(rep(c("sgCtrl_veh_", "sgTraf3_1_veh_", "sgTraf3_2_ve
 SampleAnn = data.frame(row.names = colnames(rawcount),
                        Condition = gsub("_1|_2|_3|_r.$", "", colnames(rawcount)),
                        stringsAsFactors = FALSE)
-Mouse2Human = TransGeneID(rownames(rawcount), fromType = "Symbol", "Symbol",
-                          fromOrg = "mmu", toOrg = "hsa")
-Mouse2Human = Mouse2Human[!(is.na(Mouse2Human)|Mouse2Human=="")]
-rawcount = rawcount[rownames(rawcount)%in%names(Mouse2Human), ]
 normcount = TransformCount(rawcount, method = "vst")
 rownames(normcount) = rownames(rawcount)
+degres1 = readRDS("data/Figure2/DESeqRes_koTRAF3_Veh.rds")
+degres1 = degres1[order(-degres1$stat), ]
+degres2 = readRDS("data/Figure2/DESeqRes_koTRAF3_IFNg.rds")
+degres2 = degres2[order(-degres2$stat), ]
 
 #### Heatmap shows the top differential genes ####
 scaledata = t(scale(t(normcount[,1:6])))
@@ -55,7 +57,7 @@ p = Heatmap(gg[1:100,], cluster_rows = FALSE, cluster_columns = FALSE,
               legend_width = unit(2, "in"),
               title_position = "lefttop",
               legend_direction = "horizontal"))
-pdf(paste0("Heatmap_koTRAF3_RNASeq_Vehicle.pdf"), width = 5, height = 4.5)
+pdf(paste0("Figure2/Fig2_Heatmap_koTRAF3_RNASeq_Vehicle.pdf"), width = 5, height = 4.5)
 draw(p, padding = unit(c(2, 2, 2, 2), "mm"), heatmap_legend_side = "bottom")
 dev.off()
 
@@ -93,38 +95,25 @@ p = Heatmap(gg[1:100,], cluster_rows = FALSE, cluster_columns = FALSE,
               legend_width = unit(1, "in"),
               title_position = "lefttop",
               legend_direction = "horizontal"))
-pdf(paste0("Heatmap_koTRAF3_RNASeq_IFNg.pdf"), width = 5, height = 4.5)
+pdf(paste0("Figure2/Fig2_Heatmap_koTRAF3_RNASeq_IFNg.pdf"), width = 5, height = 4.5)
 draw(p, padding = unit(c(2, 2, 2, 2), "mm"), heatmap_legend_side = "bottom")
 dev.off()
 
 #### Barplot shows the top enriched pathways ####
-degres1 = readRDS("data/Figure2/DESeqRes_koTRAF3_Veh.rds")
-degres1 = degres1[order(-degres1$stat), ]
 genelist = degres1$stat; names(genelist) = rownames(degres1)
 ortRes1 = EnrichAnalyzer(genelist[1:200], universe = rownames(degres1),
                          keytype = "Symbol", type = "GOBP", method = "HGT",
                          organism = "mmu")
-degres2 = readRDS("data/Figure2/DESeqRes_koTRAF3_IFNg.rds")
-degres2 = degres2[order(-degres1$stat), ]
 genelist = degres2$stat; names(genelist) = rownames(degres2)
 ortRes2 = EnrichAnalyzer(genelist[1:200], universe = rownames(degres2),
                          keytype = "Symbol", type = "GOBP", method = "HGT",
                          organism = "mmu")
 df = ortRes1@result
 df$logFDR = -log10(df$p.adjust)
-df = df[df$ID%in%c("GO_ANTIGEN_PROCESSING_AND_PRESENTATION_OF_ENDOGENOUS_PEPTIDE_ANTIGEN",
-                   "GO_ANTIGEN_PROCESSING_AND_PRESENTATION_OF_PEPTIDE_ANTIGEN_VIA_MHC_CLASS_I",
-                   "GO_INTERFERON_GAMMA_MEDIATED_SIGNALING_PATHWAY",
-                   "GO_REGULATION_OF_ADAPTIVE_IMMUNE_RESPONSE",
-                   "GO_TUMOR_NECROSIS_FACTOR_MEDIATED_SIGNALING_PATHWAY",
-                   "GO_T_CELL_MEDIATED_CYTOTOXICITY",
-                   "GO_RESPONSE_TO_TYPE_I_INTERFERON", "GO_NIK_NF_KAPPAB_SIGNALING",
-                   "GO_RESPONSE_TO_INTERLEUKIN_1",
-                   # "GO_MYD88_INDEPENDENT_TOLL_LIKE_RECEPTOR_SIGNALING_PATHWAY",
-                   "GO_REGULATION_OF_CYTOKINE_PRODUCTION_INVOLVED_IN_IMMUNE_RESPONSE"), ]
-df$Description = c("Antigen presentation of endogenous peptide",
-                   "Interferon gamma signaling", "Adaptive immune response",
-                   "Antigen presentation via MHC-I",
+df = df[c("GO:0002476", "GO:0060333", "GO:0002250", "GO:0002474", "GO:0001916",
+          "GO:0071356", "GO:0060337", "GO:0007249", "GO:0071347", "GO:0019221"), ]
+df$Description = c("Antigen presentation of endogenous peptide", "Interferon gamma signaling",
+                   "Adaptive immune response", "Antigen presentation via MHC-I",
                    "T cell mediated cytotoxicity", "TNF signaling pathway",
                    "Response to type I interferon", "NIK NF kappab signaling",
                    "Response to interleukin 1", "Cytokine production")
@@ -132,23 +121,19 @@ p = BarView(df, "Description", 'logFDR', fill = "#8da0cb")
 p = p + labs(x = NULL, y = expression(-log[10]*FDR),
              title = "sgTraf3 vs sgControl (Veh)") + coord_flip()
 p
-ggsave("BarView_enrichment_koTRAF3_Veh.pdf", p, width = 6.5, height = 3.5)
+ggsave("Figure2/Fig2_BarView_enrichment_koTRAF3_Veh.pdf", p, width = 6.5, height = 3.5)
 
 df = ortRes2@result
 df$logFDR = -log10(df$p.adjust)
-df = df[df$ID%in%c("GO_ANTIGEN_PROCESSING_AND_PRESENTATION_OF_ENDOGENOUS_PEPTIDE_ANTIGEN",
-                   "GO_ANTIGEN_PROCESSING_AND_PRESENTATION_OF_PEPTIDE_ANTIGEN_VIA_MHC_CLASS_I",
-                   "GO_INTERFERON_GAMMA_MEDIATED_SIGNALING_PATHWAY", "GO_REGULATION_OF_ADAPTIVE_IMMUNE_RESPONSE",
-                   "GO_TUMOR_NECROSIS_FACTOR_MEDIATED_SIGNALING_PATHWAY", "GO_T_CELL_MEDIATED_CYTOTOXICITY",
-                   "GO_RESPONSE_TO_TYPE_I_INTERFERON", "GO_NIK_NF_KAPPAB_SIGNALING", "GO_RESPONSE_TO_INTERLEUKIN_1",
-                   "GO_MYD88_INDEPENDENT_TOLL_LIKE_RECEPTOR_SIGNALING_PATHWAY"), ]
+df = df[c("GO:0002476", "GO:0002474", "GO:0071356", "GO:0038061", "GO:0071356",
+          "GO:0001916", "GO:0032479", "GO:0007249", "GO:0071347", "GO:0002755"), ]
 df$Description = paste0(substr(df$Description,0,1), tolower(substr(df$Description,2,nchar(df$Description))))
 df$Description = gsub("mhc class i", "MHC-I", df$Description)
 df$Description = gsub("Nik nf", "NIK NF", df$Description)
 df$Description = gsub("type i", "type I", df$Description)
-df$Description = c("Antigen presentation via MHC-I",
-                   "T cell mediated cytotoxicity", "TNF signaling pathway",
-                   "NIK NF kappab signaling", "Antigen presentation of endogenous peptide",
+df$Description = c("Antigen presentation via MHC-I", "T cell mediated cytotoxicity",
+                   "TNF signaling pathway", "NIK NF kappab signaling",
+                   "Antigen presentation of endogenous peptide",
                    "Interferon gamma signaling", "Response to type I interferon",
                    "Adaptive immune response", "Response to interleukin 1",
                    "Toll like receptor signaling")
@@ -157,4 +142,4 @@ p = BarView(df, "Description", 'logFDR', fill = "#8da0cb")
 p = p + labs(x = NULL, y = expression(-log[10]*FDR),
              title = "sgTraf3 vs sgControl (IFNg)") + coord_flip()
 p
-ggsave("BarView_enrichment_koTRAF3_IFNg.pdf", p, width = 6.5, height = 3.5)
+ggsave("Figure2/Fig2_BarView_enrichment_koTRAF3_IFNg.pdf", p, width = 6.5, height = 3.5)

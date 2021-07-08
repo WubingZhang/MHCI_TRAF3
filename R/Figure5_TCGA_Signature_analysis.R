@@ -1,6 +1,4 @@
 rm(list = ls())
-require("ggView")
-require("quickAnalyze")
 require("GSVA")
 require("ggpubr")
 require("survival")
@@ -8,7 +6,7 @@ library("survminer")
 library("Biobase")
 date = format(Sys.time(), "%b.%d.%Y")
 ### Too large, so the data are not provided
-exprdir = "TCGA/ProcessedDat/" 
+exprdir = "TCGA/ProcessedDat/"
 source('R/TCGA_Correlation.R')
 source('R/Tigger.TCGA.R')
 #### Read the signatures ####
